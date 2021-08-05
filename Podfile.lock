@@ -1,0 +1,28 @@
+PODS:
+  - MobileVLCKit (3.3.9)
+  - SwiftyXMLParser (5.3.0)
+
+DEPENDENCIES:
+  - MobileVLCKit
+  - SwiftyXMLParser (from `https://github.com/yahoojapan/SwiftyXMLParser.git`)
+
+SPEC REPOS:
+  trunk:
+    - MobileVLCKit
+
+EXTERNAL SOURCES:
+  SwiftyXMLParser:
+    :git: https://github.com/yahoojapan/SwiftyXMLParser.git
+
+CHECKOUT OPTIONS:
+  SwiftyXMLParser:
+    :commit: b7beef45ecba2df71ac831245f71141ec0efb1fb
+    :git: https://github.com/yahoojapan/SwiftyXMLParser.git
+
+SPEC CHECKSUMS:
+  MobileVLCKit: cf10c4a138d89f3843b6290f94823609b34215a1
+  SwiftyXMLParser: 0985085180f1ee01916cd9b5c1a4f0a8f493c084
+
+PODFILE CHECKSUM: afb299455c26912f5500315144e4889a08065f05
+
+COCOAPODS: 1.10.2
