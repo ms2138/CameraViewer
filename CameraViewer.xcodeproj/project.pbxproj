@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -20,6 +20,7 @@
 		04EF8733F306E4BF56B443BB /* Pods_CameraViewer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CameraViewer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B9669CDD9F4C937593A3A1E /* Pods-CameraViewer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CameraViewer.release.xcconfig"; path = "Target Support Files/Pods-CameraViewer/Pods-CameraViewer.release.xcconfig"; sourceTree = "<group>"; };
 		2A53932FDCD99939EC8B40E9 /* Pods-CameraViewer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CameraViewer.debug.xcconfig"; path = "Target Support Files/Pods-CameraViewer/Pods-CameraViewer.debug.xcconfig"; sourceTree = "<group>"; };
+		3C0453AD26BBA7EF007C402F /* CameraViewer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CameraViewer-Bridging-Header.h"; sourceTree = "<group>"; };
 		3C71E7FF26BA5A2A001603E2 /* CameraViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CameraViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C71E80226BA5A2A001603E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3C71E80426BA5A2A001603E2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -70,6 +71,7 @@
 				3C71E80B26BA5A6A001603E2 /* Assets.xcassets */,
 				3C71E80D26BA5A6A001603E2 /* LaunchScreen.storyboard */,
 				3C71E81026BA5A6A001603E2 /* Info.plist */,
+				3C0453AD26BBA7EF007C402F /* CameraViewer-Bridging-Header.h */,
 			);
 			path = CameraViewer;
 			sourceTree = "<group>";
@@ -80,7 +82,6 @@
 				2A53932FDCD99939EC8B40E9 /* Pods-CameraViewer.debug.xcconfig */,
 				1B9669CDD9F4C937593A3A1E /* Pods-CameraViewer.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
