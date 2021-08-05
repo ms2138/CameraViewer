@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C0453BA26BBABDA007C402F /* ONVIFProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0453B326BBABDA007C402F /* ONVIFProfile.swift */; };
+		3C0453BB26BBABDA007C402F /* ONVIFStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0453B426BBABDA007C402F /* ONVIFStream.swift */; };
+		3C0453BC26BBABDA007C402F /* ONVIFQueryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0453B526BBABDA007C402F /* ONVIFQueryService.swift */; };
+		3C0453BD26BBABDA007C402F /* ONVIFDiscovery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0453B626BBABDA007C402F /* ONVIFDiscovery.swift */; };
+		3C0453BE26BBABDA007C402F /* ONVIFRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0453B726BBABDA007C402F /* ONVIFRequest.swift */; };
+		3C0453BF26BBABDA007C402F /* ONVIFDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0453B826BBABDA007C402F /* ONVIFDevice.swift */; };
+		3C0453C026BBABDA007C402F /* ONVIFCredential.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0453B926BBABDA007C402F /* ONVIFCredential.swift */; };
+		3C0453CF26BBACDF007C402F /* UDPBroadcastConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0453CD26BBACDF007C402F /* UDPBroadcastConnection.swift */; };
+		3C0453D026BBACDF007C402F /* UDPBroadcastConnectionError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0453CE26BBACDF007C402F /* UDPBroadcastConnectionError.swift */; };
 		3C71E80326BA5A2A001603E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C71E80226BA5A2A001603E2 /* AppDelegate.swift */; };
 		3C71E80526BA5A2A001603E2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C71E80426BA5A2A001603E2 /* SceneDelegate.swift */; };
 		3C71E80726BA5A2A001603E2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C71E80626BA5A2A001603E2 /* ViewController.swift */; };
@@ -21,6 +30,15 @@
 		1B9669CDD9F4C937593A3A1E /* Pods-CameraViewer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CameraViewer.release.xcconfig"; path = "Target Support Files/Pods-CameraViewer/Pods-CameraViewer.release.xcconfig"; sourceTree = "<group>"; };
 		2A53932FDCD99939EC8B40E9 /* Pods-CameraViewer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CameraViewer.debug.xcconfig"; path = "Target Support Files/Pods-CameraViewer/Pods-CameraViewer.debug.xcconfig"; sourceTree = "<group>"; };
 		3C0453AD26BBA7EF007C402F /* CameraViewer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CameraViewer-Bridging-Header.h"; sourceTree = "<group>"; };
+		3C0453B326BBABDA007C402F /* ONVIFProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ONVIFProfile.swift; sourceTree = "<group>"; };
+		3C0453B426BBABDA007C402F /* ONVIFStream.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ONVIFStream.swift; sourceTree = "<group>"; };
+		3C0453B526BBABDA007C402F /* ONVIFQueryService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ONVIFQueryService.swift; sourceTree = "<group>"; };
+		3C0453B626BBABDA007C402F /* ONVIFDiscovery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ONVIFDiscovery.swift; sourceTree = "<group>"; };
+		3C0453B726BBABDA007C402F /* ONVIFRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ONVIFRequest.swift; sourceTree = "<group>"; };
+		3C0453B826BBABDA007C402F /* ONVIFDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ONVIFDevice.swift; sourceTree = "<group>"; };
+		3C0453B926BBABDA007C402F /* ONVIFCredential.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ONVIFCredential.swift; sourceTree = "<group>"; };
+		3C0453CD26BBACDF007C402F /* UDPBroadcastConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UDPBroadcastConnection.swift; sourceTree = "<group>"; };
+		3C0453CE26BBACDF007C402F /* UDPBroadcastConnectionError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UDPBroadcastConnectionError.swift; sourceTree = "<group>"; };
 		3C71E7FF26BA5A2A001603E2 /* CameraViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CameraViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C71E80226BA5A2A001603E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3C71E80426BA5A2A001603E2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +61,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3C0453B226BBABDA007C402F /* ONVIF */ = {
+			isa = PBXGroup;
+			children = (
+				3C0453B326BBABDA007C402F /* ONVIFProfile.swift */,
+				3C0453B426BBABDA007C402F /* ONVIFStream.swift */,
+				3C0453B526BBABDA007C402F /* ONVIFQueryService.swift */,
+				3C0453B626BBABDA007C402F /* ONVIFDiscovery.swift */,
+				3C0453B726BBABDA007C402F /* ONVIFRequest.swift */,
+				3C0453B826BBABDA007C402F /* ONVIFDevice.swift */,
+				3C0453B926BBABDA007C402F /* ONVIFCredential.swift */,
+			);
+			path = ONVIF;
+			sourceTree = "<group>";
+		};
+		3C0453C226BBAC03007C402F /* UDPBroadcast */ = {
+			isa = PBXGroup;
+			children = (
+				3C0453CD26BBACDF007C402F /* UDPBroadcastConnection.swift */,
+				3C0453CE26BBACDF007C402F /* UDPBroadcastConnectionError.swift */,
+			);
+			path = UDPBroadcast;
+			sourceTree = "<group>";
+		};
 		3C71E7F626BA5A2A001603E2 = {
 			isa = PBXGroup;
 			children = (
@@ -68,6 +109,8 @@
 				3C71E80426BA5A2A001603E2 /* SceneDelegate.swift */,
 				3C71E80626BA5A2A001603E2 /* ViewController.swift */,
 				3C71E80826BA5A2A001603E2 /* Main.storyboard */,
+				3C0453C226BBAC03007C402F /* UDPBroadcast */,
+				3C0453B226BBABDA007C402F /* ONVIF */,
 				3C71E80B26BA5A6A001603E2 /* Assets.xcassets */,
 				3C71E80D26BA5A6A001603E2 /* LaunchScreen.storyboard */,
 				3C71E81026BA5A6A001603E2 /* Info.plist */,
@@ -207,9 +250,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C0453BE26BBABDA007C402F /* ONVIFRequest.swift in Sources */,
+				3C0453BB26BBABDA007C402F /* ONVIFStream.swift in Sources */,
+				3C0453CF26BBACDF007C402F /* UDPBroadcastConnection.swift in Sources */,
+				3C0453BD26BBABDA007C402F /* ONVIFDiscovery.swift in Sources */,
+				3C0453BC26BBABDA007C402F /* ONVIFQueryService.swift in Sources */,
+				3C0453BA26BBABDA007C402F /* ONVIFProfile.swift in Sources */,
 				3C71E80726BA5A2A001603E2 /* ViewController.swift in Sources */,
 				3C71E80326BA5A2A001603E2 /* AppDelegate.swift in Sources */,
+				3C0453C026BBABDA007C402F /* ONVIFCredential.swift in Sources */,
 				3C71E80526BA5A2A001603E2 /* SceneDelegate.swift in Sources */,
+				3C0453D026BBACDF007C402F /* UDPBroadcastConnectionError.swift in Sources */,
+				3C0453BF26BBABDA007C402F /* ONVIFDevice.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,6 +345,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VALIDATE_WORKSPACE = NO;
 			};
 			name = Debug;
 		};
@@ -348,6 +401,7 @@
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
+				VALIDATE_WORKSPACE = NO;
 			};
 			name = Release;
 		};
@@ -365,6 +419,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.CameraViewer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/$(PROJECT_NAME)/$(PROJECT_NAME)-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -384,6 +439,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.CameraViewer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/$(PROJECT_NAME)/$(PROJECT_NAME)-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

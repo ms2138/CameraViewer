@@ -1,5 +1,5 @@
 PODS:
-  - MobileVLCKit (3.3.9)
+  - MobileVLCKit (3.3.17)
   - SwiftyXMLParser (5.3.0)
 
 DEPENDENCIES:
@@ -20,7 +20,7 @@ CHECKOUT OPTIONS:
     :git: https://github.com/yahoojapan/SwiftyXMLParser.git
 
 SPEC CHECKSUMS:
-  MobileVLCKit: cf10c4a138d89f3843b6290f94823609b34215a1
+  MobileVLCKit: c5dd1b0ae933dc9c2348099840e753496dcdd908
   SwiftyXMLParser: 0985085180f1ee01916cd9b5c1a4f0a8f493c084
 
 PODFILE CHECKSUM: afb299455c26912f5500315144e4889a08065f05
