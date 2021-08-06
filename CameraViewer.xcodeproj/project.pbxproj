@@ -21,6 +21,7 @@
 		3C0453F526BCEB9B007C402F /* DahuaDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0453F426BCEB9B007C402F /* DahuaDevice.swift */; };
 		3C0453F926BCEBD1007C402F /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0453F826BCEBD1007C402F /* Channel.swift */; };
 		3C0453FC26BCEC94007C402F /* Credential.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0453FB26BCEC94007C402F /* Credential.swift */; };
+		3C0453FF26BCEDAB007C402F /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0453FE26BCEDAB007C402F /* Event.swift */; };
 		3C71E80326BA5A2A001603E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C71E80226BA5A2A001603E2 /* AppDelegate.swift */; };
 		3C71E80526BA5A2A001603E2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C71E80426BA5A2A001603E2 /* SceneDelegate.swift */; };
 		3C71E80726BA5A2A001603E2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C71E80626BA5A2A001603E2 /* ViewController.swift */; };
@@ -49,6 +50,7 @@
 		3C0453F426BCEB9B007C402F /* DahuaDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DahuaDevice.swift; sourceTree = "<group>"; };
 		3C0453F826BCEBD1007C402F /* Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
 		3C0453FB26BCEC94007C402F /* Credential.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credential.swift; sourceTree = "<group>"; };
+		3C0453FE26BCEDAB007C402F /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		3C71E7FF26BA5A2A001603E2 /* CameraViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CameraViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C71E80226BA5A2A001603E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3C71E80426BA5A2A001603E2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 			children = (
 				3C0453F426BCEB9B007C402F /* DahuaDevice.swift */,
 				3C0453FB26BCEC94007C402F /* Credential.swift */,
+				3C0453FE26BCEDAB007C402F /* Event.swift */,
 				3C0453F826BCEBD1007C402F /* Channel.swift */,
 			);
 			path = Models;
@@ -299,6 +302,7 @@
 				3C0453EB26BBB5D5007C402F /* DahuaAPI.swift in Sources */,
 				3C0453BD26BBABDA007C402F /* ONVIFDiscovery.swift in Sources */,
 				3C0453BC26BBABDA007C402F /* ONVIFQueryService.swift in Sources */,
+				3C0453FF26BCEDAB007C402F /* Event.swift in Sources */,
 				3C0453BA26BBABDA007C402F /* ONVIFProfile.swift in Sources */,
 				3C71E80726BA5A2A001603E2 /* ViewController.swift in Sources */,
 				3C71E80326BA5A2A001603E2 /* AppDelegate.swift in Sources */,
