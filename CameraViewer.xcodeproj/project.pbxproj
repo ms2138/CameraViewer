@@ -97,6 +97,15 @@
 			path = "Dahua API";
 			sourceTree = "<group>";
 		};
+		3C0453F026BCEA5E007C402F /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				3C71E80826BA5A2A001603E2 /* Main.storyboard */,
+				3C71E80D26BA5A6A001603E2 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
 		3C71E7F626BA5A2A001603E2 = {
 			isa = PBXGroup;
 			children = (
@@ -121,12 +130,11 @@
 				3C71E80226BA5A2A001603E2 /* AppDelegate.swift */,
 				3C71E80426BA5A2A001603E2 /* SceneDelegate.swift */,
 				3C71E80626BA5A2A001603E2 /* ViewController.swift */,
-				3C71E80826BA5A2A001603E2 /* Main.storyboard */,
+				3C0453F026BCEA5E007C402F /* Storyboards */,
 				3C0453E826BBB5D5007C402F /* Dahua API */,
 				3C0453C226BBAC03007C402F /* UDPBroadcast */,
 				3C0453B226BBABDA007C402F /* ONVIF */,
 				3C71E80B26BA5A6A001603E2 /* Assets.xcassets */,
-				3C71E80D26BA5A6A001603E2 /* LaunchScreen.storyboard */,
 				3C71E81026BA5A6A001603E2 /* Info.plist */,
 				3C0453AD26BBA7EF007C402F /* CameraViewer-Bridging-Header.h */,
 			);
