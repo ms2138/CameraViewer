@@ -10,6 +10,11 @@ import Foundation
 class CameraView: UIView {
     let textLabel = UILabel(frame: .zero)
     let mediaPlayer = VLCMediaPlayer()
+    var isMuted: Bool = true {
+        willSet {
+            mediaPlayer.audio.volume = (newValue == true) ? 0 : 100
+        }
+    }
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -39,5 +44,12 @@ class CameraView: UIView {
             textLabel.centerYAnchor.constraint(equalTo: self.safeAreaLayoutGuide.centerYAnchor),
             textLabel.centerXAnchor.constraint(equalTo: self.safeAreaLayoutGuide.centerXAnchor)
         ])
+    }
+
+    func loadVideo(from url: URL) {
+        let media = VLCMedia(url: url)
+        mediaPlayer.media = media
+        isMuted = true
+        mediaPlayer.play()
     }
 }
