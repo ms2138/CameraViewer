@@ -21,4 +21,12 @@ class CameraCell: UICollectionViewCell {
         super.awakeFromNib()
         checkmark.checked = false
     }
+
+    func displayCamera(for url: URL) {
+        cameraView.loadVideo(from: url)
+    }
+
+    func unloadCamera() {
+        cameraView.mediaPlayer.stop()
+    }
 }
