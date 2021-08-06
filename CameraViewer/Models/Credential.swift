@@ -8,5 +8,6 @@
 import Foundation
 
 struct Credential {
-
+    var username: String
+    var password: String
 }
