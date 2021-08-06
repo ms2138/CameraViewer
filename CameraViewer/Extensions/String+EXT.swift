@@ -6,3 +6,16 @@
 //
 
 import Foundation
+
+extension StringProtocol where Self: RangeReplaceableCollection {
+    mutating func removeAllWhitespacesAndNewlines() {
+        return removeAll { $0.isNewline || $0.isWhitespace }
+    }
+}
+
+extension String {
+    var digits: String {
+        return components(separatedBy: CharacterSet.decimalDigits.inverted)
+            .joined()
+    }
+}
