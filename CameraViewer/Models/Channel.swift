@@ -8,5 +8,6 @@
 import Foundation
 
 struct Channel: Codable {
-
+    var name: String
+    var number: String
 }
