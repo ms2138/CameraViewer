@@ -8,5 +8,8 @@
 import Foundation
 
 struct DahuaDevice: Codable {
-
+    var type: String
+    var address: String
+    var serial: String
+    var channels: [Channel]
 }
