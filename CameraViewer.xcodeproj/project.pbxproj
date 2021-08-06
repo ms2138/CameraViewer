@@ -25,7 +25,7 @@
 		3C04540326BCEE7F007C402F /* String+EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C04540226BCEE7F007C402F /* String+EXT.swift */; };
 		3C71E80326BA5A2A001603E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C71E80226BA5A2A001603E2 /* AppDelegate.swift */; };
 		3C71E80526BA5A2A001603E2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C71E80426BA5A2A001603E2 /* SceneDelegate.swift */; };
-		3C71E80726BA5A2A001603E2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C71E80626BA5A2A001603E2 /* ViewController.swift */; };
+		3C71E80726BA5A2A001603E2 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C71E80626BA5A2A001603E2 /* CameraViewController.swift */; };
 		3C71E80A26BA5A2A001603E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C71E80826BA5A2A001603E2 /* Main.storyboard */; };
 		3C71E80C26BA5A6A001603E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C71E80B26BA5A6A001603E2 /* Assets.xcassets */; };
 		3C71E80F26BA5A6A001603E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C71E80D26BA5A6A001603E2 /* LaunchScreen.storyboard */; };
@@ -56,7 +56,7 @@
 		3C71E7FF26BA5A2A001603E2 /* CameraViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CameraViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C71E80226BA5A2A001603E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3C71E80426BA5A2A001603E2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3C71E80626BA5A2A001603E2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3C71E80626BA5A2A001603E2 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		3C71E80926BA5A2A001603E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3C71E80B26BA5A6A001603E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3C71E80E26BA5A6A001603E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -160,7 +160,7 @@
 				3C0453F326BCEB76007C402F /* Models */,
 				3C71E80226BA5A2A001603E2 /* AppDelegate.swift */,
 				3C71E80426BA5A2A001603E2 /* SceneDelegate.swift */,
-				3C71E80626BA5A2A001603E2 /* ViewController.swift */,
+				3C71E80626BA5A2A001603E2 /* CameraViewController.swift */,
 				3C0453F026BCEA5E007C402F /* Storyboards */,
 				3C0453E826BBB5D5007C402F /* Dahua API */,
 				3C0453C226BBAC03007C402F /* UDPBroadcast */,
@@ -315,7 +315,7 @@
 				3C0453BC26BBABDA007C402F /* ONVIFQueryService.swift in Sources */,
 				3C0453FF26BCEDAB007C402F /* Event.swift in Sources */,
 				3C0453BA26BBABDA007C402F /* ONVIFProfile.swift in Sources */,
-				3C71E80726BA5A2A001603E2 /* ViewController.swift in Sources */,
+				3C71E80726BA5A2A001603E2 /* CameraViewController.swift in Sources */,
 				3C71E80326BA5A2A001603E2 /* AppDelegate.swift in Sources */,
 				3C0453C026BBABDA007C402F /* ONVIFCredential.swift in Sources */,
 				3C71E80526BA5A2A001603E2 /* SceneDelegate.swift in Sources */,
