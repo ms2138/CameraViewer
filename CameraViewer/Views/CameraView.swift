@@ -32,4 +32,12 @@ class CameraView: UIView {
 
         addSubview(textLabel)
     }
+
+    override func layoutSubviews() {
+        textLabel.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            textLabel.centerYAnchor.constraint(equalTo: self.safeAreaLayoutGuide.centerYAnchor),
+            textLabel.centerXAnchor.constraint(equalTo: self.safeAreaLayoutGuide.centerXAnchor)
+        ])
+    }
 }
