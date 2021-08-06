@@ -12,4 +12,17 @@ class DTCheckMarkView: UIView {
         case openCircle
         case grayedOut
     }
+
+    var checked: Bool = false {
+        didSet {
+            setNeedsDisplay()
+        }
+    }
+
+    var checkMarkStyle: DTCheckMarkStyle = .grayedOut {
+        didSet {
+            setNeedsDisplay()
+        }
+    }
+
 }
