@@ -145,6 +145,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		3C04541026BD00A9007C402F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3C71E80626BA5A2A001603E2 /* CameraViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		3C71E7F626BA5A2A001603E2 = {
 			isa = PBXGroup;
 			children = (
@@ -171,7 +179,7 @@
 				3C0453F326BCEB76007C402F /* Models */,
 				3C71E80226BA5A2A001603E2 /* AppDelegate.swift */,
 				3C71E80426BA5A2A001603E2 /* SceneDelegate.swift */,
-				3C71E80626BA5A2A001603E2 /* CameraViewController.swift */,
+				3C04541026BD00A9007C402F /* Controllers */,
 				3C0453F026BCEA5E007C402F /* Storyboards */,
 				3C0453E826BBB5D5007C402F /* Dahua API */,
 				3C0453C226BBAC03007C402F /* UDPBroadcast */,
