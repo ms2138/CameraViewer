@@ -25,6 +25,7 @@
 		3C04540326BCEE7F007C402F /* String+EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C04540226BCEE7F007C402F /* String+EXT.swift */; };
 		3C04540926BCFF6D007C402F /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C04540826BCFF6D007C402F /* CameraView.swift */; };
 		3C04541426BD0104007C402F /* CameraCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C04541326BD0104007C402F /* CameraCell.swift */; };
+		3C04541726BD01CE007C402F /* DTCheckMarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C04541626BD01CE007C402F /* DTCheckMarkView.swift */; };
 		3C71E80326BA5A2A001603E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C71E80226BA5A2A001603E2 /* AppDelegate.swift */; };
 		3C71E80526BA5A2A001603E2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C71E80426BA5A2A001603E2 /* SceneDelegate.swift */; };
 		3C71E80726BA5A2A001603E2 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C71E80626BA5A2A001603E2 /* CameraViewController.swift */; };
@@ -57,6 +58,7 @@
 		3C04540226BCEE7F007C402F /* String+EXT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+EXT.swift"; sourceTree = "<group>"; };
 		3C04540826BCFF6D007C402F /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		3C04541326BD0104007C402F /* CameraCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraCell.swift; sourceTree = "<group>"; };
+		3C04541626BD01CE007C402F /* DTCheckMarkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DTCheckMarkView.swift; sourceTree = "<group>"; };
 		3C71E7FF26BA5A2A001603E2 /* CameraViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CameraViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C71E80226BA5A2A001603E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3C71E80426BA5A2A001603E2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				3C04540826BCFF6D007C402F /* CameraView.swift */,
+				3C04541626BD01CE007C402F /* DTCheckMarkView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -351,6 +354,7 @@
 				3C04541426BD0104007C402F /* CameraCell.swift in Sources */,
 				3C0453C026BBABDA007C402F /* ONVIFCredential.swift in Sources */,
 				3C71E80526BA5A2A001603E2 /* SceneDelegate.swift in Sources */,
+				3C04541726BD01CE007C402F /* DTCheckMarkView.swift in Sources */,
 				3C0453D026BBACDF007C402F /* UDPBroadcastConnectionError.swift in Sources */,
 				3C04540326BCEE7F007C402F /* String+EXT.swift in Sources */,
 				3C0453BF26BBABDA007C402F /* ONVIFDevice.swift in Sources */,
