@@ -16,6 +16,8 @@
 		3C0453C026BBABDA007C402F /* ONVIFCredential.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0453B926BBABDA007C402F /* ONVIFCredential.swift */; };
 		3C0453CF26BBACDF007C402F /* UDPBroadcastConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0453CD26BBACDF007C402F /* UDPBroadcastConnection.swift */; };
 		3C0453D026BBACDF007C402F /* UDPBroadcastConnectionError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0453CE26BBACDF007C402F /* UDPBroadcastConnectionError.swift */; };
+		3C0453EB26BBB5D5007C402F /* DahuaAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0453E926BBB5D5007C402F /* DahuaAPI.swift */; };
+		3C0453EC26BBB5D5007C402F /* DahuaQueryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0453EA26BBB5D5007C402F /* DahuaQueryService.swift */; };
 		3C71E80326BA5A2A001603E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C71E80226BA5A2A001603E2 /* AppDelegate.swift */; };
 		3C71E80526BA5A2A001603E2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C71E80426BA5A2A001603E2 /* SceneDelegate.swift */; };
 		3C71E80726BA5A2A001603E2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C71E80626BA5A2A001603E2 /* ViewController.swift */; };
@@ -39,6 +41,8 @@
 		3C0453B926BBABDA007C402F /* ONVIFCredential.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ONVIFCredential.swift; sourceTree = "<group>"; };
 		3C0453CD26BBACDF007C402F /* UDPBroadcastConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UDPBroadcastConnection.swift; sourceTree = "<group>"; };
 		3C0453CE26BBACDF007C402F /* UDPBroadcastConnectionError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UDPBroadcastConnectionError.swift; sourceTree = "<group>"; };
+		3C0453E926BBB5D5007C402F /* DahuaAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DahuaAPI.swift; sourceTree = "<group>"; };
+		3C0453EA26BBB5D5007C402F /* DahuaQueryService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DahuaQueryService.swift; sourceTree = "<group>"; };
 		3C71E7FF26BA5A2A001603E2 /* CameraViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CameraViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C71E80226BA5A2A001603E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3C71E80426BA5A2A001603E2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -84,6 +88,15 @@
 			path = UDPBroadcast;
 			sourceTree = "<group>";
 		};
+		3C0453E826BBB5D5007C402F /* Dahua API */ = {
+			isa = PBXGroup;
+			children = (
+				3C0453E926BBB5D5007C402F /* DahuaAPI.swift */,
+				3C0453EA26BBB5D5007C402F /* DahuaQueryService.swift */,
+			);
+			path = "Dahua API";
+			sourceTree = "<group>";
+		};
 		3C71E7F626BA5A2A001603E2 = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +122,7 @@
 				3C71E80426BA5A2A001603E2 /* SceneDelegate.swift */,
 				3C71E80626BA5A2A001603E2 /* ViewController.swift */,
 				3C71E80826BA5A2A001603E2 /* Main.storyboard */,
+				3C0453E826BBB5D5007C402F /* Dahua API */,
 				3C0453C226BBAC03007C402F /* UDPBroadcast */,
 				3C0453B226BBABDA007C402F /* ONVIF */,
 				3C71E80B26BA5A6A001603E2 /* Assets.xcassets */,
@@ -252,7 +266,9 @@
 			files = (
 				3C0453BE26BBABDA007C402F /* ONVIFRequest.swift in Sources */,
 				3C0453BB26BBABDA007C402F /* ONVIFStream.swift in Sources */,
+				3C0453EC26BBB5D5007C402F /* DahuaQueryService.swift in Sources */,
 				3C0453CF26BBACDF007C402F /* UDPBroadcastConnection.swift in Sources */,
+				3C0453EB26BBB5D5007C402F /* DahuaAPI.swift in Sources */,
 				3C0453BD26BBABDA007C402F /* ONVIFDiscovery.swift in Sources */,
 				3C0453BC26BBABDA007C402F /* ONVIFQueryService.swift in Sources */,
 				3C0453BA26BBABDA007C402F /* ONVIFProfile.swift in Sources */,
