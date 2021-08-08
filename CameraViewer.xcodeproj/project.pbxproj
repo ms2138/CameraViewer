@@ -32,6 +32,7 @@
 		3C04542626BF8BA8007C402F /* AddDeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C04542526BF8BA8007C402F /* AddDeviceViewController.swift */; };
 		3C04542D26BFAF8D007C402F /* AddDevice.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C04542C26BFAF8D007C402F /* AddDevice.storyboard */; };
 		3C04543126BFB467007C402F /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C04543026BFB467007C402F /* Logging.swift */; };
+		3C04543426C08BCC007C402F /* DTTableBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C04543326C08BCC007C402F /* DTTableBackgroundView.swift */; };
 		3C71E80326BA5A2A001603E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C71E80226BA5A2A001603E2 /* AppDelegate.swift */; };
 		3C71E80526BA5A2A001603E2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C71E80426BA5A2A001603E2 /* SceneDelegate.swift */; };
 		3C71E80726BA5A2A001603E2 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C71E80626BA5A2A001603E2 /* CameraViewController.swift */; };
@@ -71,6 +72,7 @@
 		3C04542526BF8BA8007C402F /* AddDeviceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDeviceViewController.swift; sourceTree = "<group>"; };
 		3C04542C26BFAF8D007C402F /* AddDevice.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddDevice.storyboard; sourceTree = "<group>"; };
 		3C04543026BFB467007C402F /* Logging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logging.swift; sourceTree = "<group>"; };
+		3C04543326C08BCC007C402F /* DTTableBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DTTableBackgroundView.swift; sourceTree = "<group>"; };
 		3C71E7FF26BA5A2A001603E2 /* CameraViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CameraViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C71E80226BA5A2A001603E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3C71E80426BA5A2A001603E2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 			children = (
 				3C04540826BCFF6D007C402F /* CameraView.swift */,
 				3C04541626BD01CE007C402F /* DTCheckMarkView.swift */,
+				3C04543326C08BCC007C402F /* DTTableBackgroundView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -380,6 +383,7 @@
 				3C0453F526BCEB9B007C402F /* DahuaDevice.swift in Sources */,
 				3C04543126BFB467007C402F /* Logging.swift in Sources */,
 				3C0453EC26BBB5D5007C402F /* DahuaQueryService.swift in Sources */,
+				3C04543426C08BCC007C402F /* DTTableBackgroundView.swift in Sources */,
 				3C0453CF26BBACDF007C402F /* UDPBroadcastConnection.swift in Sources */,
 				3C0453EB26BBB5D5007C402F /* DahuaAPI.swift in Sources */,
 				3C0453BD26BBABDA007C402F /* ONVIFDiscovery.swift in Sources */,
