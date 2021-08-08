@@ -20,6 +20,7 @@ class AddDeviceViewController: UITableViewController {
     private var discoveredDevices = [ONVIFDiscovery]()
     private lazy var queryService = ONVIFQueryService(credential: ONVIFCredential(username: "",
                                                                                   password: ""))
+    var handler: ((DahuaDevice?, Credential) -> Void)?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -234,5 +235,36 @@ extension AddDeviceViewController {
             }
         }
         return nil
+    }
+}
+
+extension AddDeviceViewController {
+    // MARK: - Table view delegate
+
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let tableSection = TableSection(rawValue: indexPath.section) {
+            if tableSection == .devices {
+                if discoveredDevices.count == 0 { return }
+                showAuthenticationController { [weak self] (username, password) in
+                    guard let weakSelf = self else { return }
+                    let discoveredDevice = weakSelf.discoveredDevices[indexPath.row]
+
+                    if let username = username, let password = password {
+                        weakSelf.createDevice(from: discoveredDevice.ipAddress,
+                                              username: username,
+                                              password: password,
+                                              completion: { (device, credential) in
+                                                weakSelf.dismiss(animated: true) {
+                                                    weakSelf.handler?(device, credential)
+                                                }
+                                              })
+                    }
+                }
+            } else if tableSection == .addDevice {
+                performSegue(withIdentifier: "showAddDeviceManually", sender: self)
+            }
+        }
+
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
