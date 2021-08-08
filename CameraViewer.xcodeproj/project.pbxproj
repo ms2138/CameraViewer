@@ -26,6 +26,9 @@
 		3C04540926BCFF6D007C402F /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C04540826BCFF6D007C402F /* CameraView.swift */; };
 		3C04541426BD0104007C402F /* CameraCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C04541326BD0104007C402F /* CameraCell.swift */; };
 		3C04541726BD01CE007C402F /* DTCheckMarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C04541626BD01CE007C402F /* DTCheckMarkView.swift */; };
+		3C04541D26BF8A51007C402F /* KeychainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C04541A26BF8A51007C402F /* KeychainWrapper.swift */; };
+		3C04541E26BF8A51007C402F /* KeychainQueryable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C04541B26BF8A51007C402F /* KeychainQueryable.swift */; };
+		3C04541F26BF8A51007C402F /* RTSPPasswordQueryable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C04541C26BF8A51007C402F /* RTSPPasswordQueryable.swift */; };
 		3C71E80326BA5A2A001603E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C71E80226BA5A2A001603E2 /* AppDelegate.swift */; };
 		3C71E80526BA5A2A001603E2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C71E80426BA5A2A001603E2 /* SceneDelegate.swift */; };
 		3C71E80726BA5A2A001603E2 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C71E80626BA5A2A001603E2 /* CameraViewController.swift */; };
@@ -59,6 +62,9 @@
 		3C04540826BCFF6D007C402F /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		3C04541326BD0104007C402F /* CameraCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraCell.swift; sourceTree = "<group>"; };
 		3C04541626BD01CE007C402F /* DTCheckMarkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DTCheckMarkView.swift; sourceTree = "<group>"; };
+		3C04541A26BF8A51007C402F /* KeychainWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainWrapper.swift; sourceTree = "<group>"; };
+		3C04541B26BF8A51007C402F /* KeychainQueryable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainQueryable.swift; sourceTree = "<group>"; };
+		3C04541C26BF8A51007C402F /* RTSPPasswordQueryable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RTSPPasswordQueryable.swift; sourceTree = "<group>"; };
 		3C71E7FF26BA5A2A001603E2 /* CameraViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CameraViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C71E80226BA5A2A001603E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3C71E80426BA5A2A001603E2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -166,6 +172,16 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		3C04541926BF8A50007C402F /* Keychain */ = {
+			isa = PBXGroup;
+			children = (
+				3C04541A26BF8A51007C402F /* KeychainWrapper.swift */,
+				3C04541B26BF8A51007C402F /* KeychainQueryable.swift */,
+				3C04541C26BF8A51007C402F /* RTSPPasswordQueryable.swift */,
+			);
+			path = Keychain;
+			sourceTree = "<group>";
+		};
 		3C71E7F626BA5A2A001603E2 = {
 			isa = PBXGroup;
 			children = (
@@ -187,6 +203,7 @@
 		3C71E80126BA5A2A001603E2 /* CameraViewer */ = {
 			isa = PBXGroup;
 			children = (
+				3C04541926BF8A50007C402F /* Keychain */,
 				3C04541226BD00F4007C402F /* Cells */,
 				3C04540726BCFF61007C402F /* Views */,
 				3C04540126BCEE6D007C402F /* Extensions */,
@@ -336,6 +353,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C04541E26BF8A51007C402F /* KeychainQueryable.swift in Sources */,
 				3C0453BE26BBABDA007C402F /* ONVIFRequest.swift in Sources */,
 				3C0453FC26BCEC94007C402F /* Credential.swift in Sources */,
 				3C0453F926BCEBD1007C402F /* Channel.swift in Sources */,
@@ -354,10 +372,12 @@
 				3C04541426BD0104007C402F /* CameraCell.swift in Sources */,
 				3C0453C026BBABDA007C402F /* ONVIFCredential.swift in Sources */,
 				3C71E80526BA5A2A001603E2 /* SceneDelegate.swift in Sources */,
+				3C04541F26BF8A51007C402F /* RTSPPasswordQueryable.swift in Sources */,
 				3C04541726BD01CE007C402F /* DTCheckMarkView.swift in Sources */,
 				3C0453D026BBACDF007C402F /* UDPBroadcastConnectionError.swift in Sources */,
 				3C04540326BCEE7F007C402F /* String+EXT.swift in Sources */,
 				3C0453BF26BBABDA007C402F /* ONVIFDevice.swift in Sources */,
+				3C04541D26BF8A51007C402F /* KeychainWrapper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
