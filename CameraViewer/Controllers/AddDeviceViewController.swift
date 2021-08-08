@@ -21,6 +21,7 @@ class AddDeviceViewController: UITableViewController {
     private lazy var queryService = ONVIFQueryService(credential: ONVIFCredential(username: "",
                                                                                   password: ""))
     var handler: ((DahuaDevice?, Credential) -> Void)?
+    var deviceFilter: [URL]?
 
     override func viewDidLoad() {
         super.viewDidLoad()
