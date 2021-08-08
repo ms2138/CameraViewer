@@ -49,3 +49,15 @@ class DTTableBackgroundView: UIView {
         stackView.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
     }
 }
+
+extension DTTableBackgroundView {
+    func startLoadingOperation() {
+        messageLabel.text = "Loading"
+        activityIndicator.startAnimating()
+    }
+
+    func stopLoadingOperation() {
+        messageLabel.text = ""
+        activityIndicator.stopAnimating()
+    }
+}
