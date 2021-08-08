@@ -15,7 +15,8 @@ class AddDeviceViewController: UITableViewController {
         case devices = "Devices"
         case addDevice = "Add Device"
     }
-    
+
+    let backgroundView = DTTableBackgroundView(frame: .zero)
     private var discoveredDevices = [ONVIFDiscovery]()
     private lazy var queryService = ONVIFQueryService(credential: ONVIFCredential(username: "",
                                                                                   password: ""))
@@ -48,6 +49,71 @@ extension AddDeviceViewController {
             }
         } catch {
             debugLog("Failed to perform UDP broadcast")
+        }
+    }
+}
+
+extension AddDeviceViewController {
+    // MARK: - Create and find devices
+
+    private func performDeviceDiscovery(filter: [URL]? = nil) {
+        let hosts = filter?.compactMap { $0.host }
+
+        getDevice { [weak self] (device) in
+            guard let weakSelf = self else { return }
+
+            DispatchQueue.main.async {
+
+                if hosts?.contains(device.ipAddress) == true {
+                    return
+                }
+
+                weakSelf.discoveredDevices.append(device)
+                weakSelf.discoveredDevices.sort { $0.ipAddress < $1.ipAddress }
+                weakSelf.tableView.reloadSections(IndexSet(integer: 0), with: .fade)
+
+                if weakSelf.discoveredDevices.count == 0 {
+                    weakSelf.backgroundView.stopLoadingOperation()
+                }
+            }
+        }
+    }
+
+    func createDevice(from host: String, username: String, password: String,
+                      completion: @escaping (DahuaDevice?, Credential) -> Void) {
+        let dahuaQuery = DahuaQueryService(host: host,
+                                           username: username,
+                                           password: password)
+        let credential = Credential(username: username, password: password)
+
+        // Get device name
+        dahuaQuery.getType { [weak self] (deviceType, error) in
+            guard let weakSelf = self else { return }
+            if let deviceType = deviceType {
+                // Get serial number
+                dahuaQuery.getSerialNumber(completion: { (serialNumber, _) in
+                    if let serialNumber = serialNumber {
+                        // Get device channel titles
+                        dahuaQuery.getChannel(completion: { (channels, _) in
+                            if let channels = channels {
+                                let device = DahuaDevice(type: deviceType,
+                                                         address: host,
+                                                         serial: serialNumber,
+                                                         channels: channels)
+                                DispatchQueue.main.async {
+                                    completion(device, credential)
+                                }
+                            }
+                        })
+                    }
+                })
+            } else {
+                if let error = error {
+                    DispatchQueue.main.async {
+                        weakSelf.showErrorAlertController(error.localizedDescription)
+                    }
+                }
+            }
         }
     }
 }
