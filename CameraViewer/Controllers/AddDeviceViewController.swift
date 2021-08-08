@@ -24,6 +24,14 @@ class AddDeviceViewController: UITableViewController {
 }
 
 extension AddDeviceViewController {
+    // MARK: - IBAction methods
+
+    @IBAction func cancel(sender: UIBarButtonItem) {
+        dismiss(animated: true, completion: nil)
+    }
+}
+
+extension AddDeviceViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
