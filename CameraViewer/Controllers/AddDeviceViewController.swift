@@ -17,6 +17,8 @@ class AddDeviceViewController: UITableViewController {
     }
     
     private var discoveredDevices = [ONVIFDiscovery]()
+    private lazy var queryService = ONVIFQueryService(credential: ONVIFCredential(username: "",
+                                                                                  password: ""))
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +30,25 @@ extension AddDeviceViewController {
 
     @IBAction func cancel(sender: UIBarButtonItem) {
         dismiss(animated: true, completion: nil)
+    }
+}
+
+extension AddDeviceViewController {
+    // MARK: - ONVIF Queries
+
+    func getDevice(completion: @escaping (ONVIFDiscovery) -> Void) {
+        do {
+            try queryService.performONVIFDiscovery { (discoveredDevice, error) in
+                if let error = error {
+                    debugLog("Error: \(error)")
+                }
+                if let discoveredDevice = discoveredDevice {
+                    completion(discoveredDevice)
+                }
+            }
+        } catch {
+            debugLog("Failed to perform UDP broadcast")
+        }
     }
 }
 
