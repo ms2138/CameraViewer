@@ -84,3 +84,27 @@ extension CameraViewController {
         return nil
     }
 }
+
+extension CameraViewController {
+    // MARK: - Adding streams
+
+    func add(stream: URL) {
+        videoStreams.append(stream)
+
+        videoStreams.sort { $0.absoluteString < $1.absoluteString }
+
+        if let index = self.videoStreams.firstIndex(of: stream) {
+            let indexPath = IndexPath(row: index, section: 0)
+            self.collectionView.insertItems(at: [indexPath])
+            self.collectionView.reloadItems(at: [indexPath])
+        }
+    }
+
+    func getRTSPStreamURL(from host: String, credential: Credential, channel: String, streamType: String) -> URL? {
+        let dahuaAPI = DahuaAPI(host: host,
+                                username: credential.username,
+                                password: credential.password)
+
+        return dahuaAPI.getRTSPStreamURL(channel: channel, streamType: streamType)
+    }
+}
