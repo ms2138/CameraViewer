@@ -45,6 +45,7 @@
 		3CDDAFDF26C0D92D0044106F /* TextInputCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDAFDE26C0D92D0044106F /* TextInputCell.swift */; };
 		3CDDAFE226C0ED310044106F /* UITableView+EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDAFE126C0ED310044106F /* UITableView+EXT.swift */; };
 		3CDDAFE526C0FFE00044106F /* InputValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDAFE426C0FFE00044106F /* InputValidation.swift */; };
+		3CDDAFE826C1003D0044106F /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDAFE726C1003D0044106F /* Validator.swift */; };
 		5389F7F5A5FD0D5FC4CEAA22 /* Pods_CameraViewer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04EF8733F306E4BF56B443BB /* Pods_CameraViewer.framework */; };
 /* End PBXBuildFile section */
 
@@ -93,6 +94,7 @@
 		3CDDAFDE26C0D92D0044106F /* TextInputCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputCell.swift; sourceTree = "<group>"; };
 		3CDDAFE126C0ED310044106F /* UITableView+EXT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+EXT.swift"; sourceTree = "<group>"; };
 		3CDDAFE426C0FFE00044106F /* InputValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputValidation.swift; sourceTree = "<group>"; };
+		3CDDAFE726C1003D0044106F /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,6 +215,7 @@
 			isa = PBXGroup;
 			children = (
 				3C04543026BFB467007C402F /* Logging.swift */,
+				3CDDAFE726C1003D0044106F /* Validator.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -413,6 +416,7 @@
 				3C0453EC26BBB5D5007C402F /* DahuaQueryService.swift in Sources */,
 				3C04543426C08BCC007C402F /* DTTableBackgroundView.swift in Sources */,
 				3C0453CF26BBACDF007C402F /* UDPBroadcastConnection.swift in Sources */,
+				3CDDAFE826C1003D0044106F /* Validator.swift in Sources */,
 				3C0453EB26BBB5D5007C402F /* DahuaAPI.swift in Sources */,
 				3CDDAFE226C0ED310044106F /* UITableView+EXT.swift in Sources */,
 				3C0453BD26BBABDA007C402F /* ONVIFDiscovery.swift in Sources */,
