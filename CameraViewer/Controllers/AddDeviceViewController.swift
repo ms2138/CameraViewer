@@ -25,6 +25,11 @@ class AddDeviceViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        backgroundView.frame = view.frame
+        tableView.backgroundView = backgroundView
+
+        performDeviceDiscovery(filter: deviceFilter)
     }
 }
 
