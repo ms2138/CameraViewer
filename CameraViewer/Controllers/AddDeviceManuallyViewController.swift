@@ -7,8 +7,13 @@
 
 import UIKit
 
-class AddDeviceManuallyViewController: UITableViewController {
-
+class AddDeviceManuallyViewController: UITableViewController, UITextFieldDelegate {
+    @IBOutlet weak var hostCell: TextInputCell!
+    @IBOutlet weak var portCell: TextInputCell!
+    @IBOutlet weak var usernameCell: TextInputCell!
+    @IBOutlet weak var passwordCell: TextInputCell!
+    private var cells = [TextInputCell]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
