@@ -44,3 +44,43 @@ extension CameraViewController {
         return cell
     }
 }
+
+extension CameraViewController {
+    // MARK: - Keychain
+
+    func saveToKeychain(credentials: Credential, query: KeychainQueryable) {
+        let keychainWrapper = KeychainWrapper(queryable: query)
+        do {
+            try keychainWrapper.save(password: credentials.password, for: credentials.username)
+        } catch {
+            debugLog("Failed to save credentials")
+        }
+    }
+
+    func removeFromKeychain(query: KeychainQueryable) {
+        let keychainWrapper = KeychainWrapper(queryable: query)
+        do {
+            try keychainWrapper.delete()
+        } catch {
+            debugLog("Failed to save credentials")
+        }
+    }
+
+    func readFromKeychain(query: KeychainQueryable) -> (username: String, password: String)? {
+        let keychainWrapper = KeychainWrapper(queryable: query)
+        do {
+            let account = try keychainWrapper.readAccount()
+            return account
+        } catch {
+            debugLog("Failed to read credentials")
+        }
+        return nil
+    }
+
+    private func generatePasswordQueryable(from url: URL) -> RTSPPasswordQueryable? {
+        if let server = url.host, let port = url.port {
+            return RTSPPasswordQueryable(server: server, port: port, path: url.path)
+        }
+        return nil
+    }
+}
