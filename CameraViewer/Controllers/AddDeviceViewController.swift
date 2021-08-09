@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AddDeviceViewController: UITableViewController {
+class AddDeviceViewController: UITableViewController, NoContentBackgroundView {
     enum TableSection: Int {
         case devices = 0, addDevice
     }
