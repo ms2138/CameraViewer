@@ -46,6 +46,7 @@
 		3CDDAFE226C0ED310044106F /* UITableView+EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDAFE126C0ED310044106F /* UITableView+EXT.swift */; };
 		3CDDAFE526C0FFE00044106F /* InputValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDAFE426C0FFE00044106F /* InputValidation.swift */; };
 		3CDDAFE826C1003D0044106F /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDAFE726C1003D0044106F /* Validator.swift */; };
+		3CDDAFEB26C100700044106F /* UITextField+EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDAFEA26C100700044106F /* UITextField+EXT.swift */; };
 		5389F7F5A5FD0D5FC4CEAA22 /* Pods_CameraViewer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04EF8733F306E4BF56B443BB /* Pods_CameraViewer.framework */; };
 /* End PBXBuildFile section */
 
@@ -95,6 +96,7 @@
 		3CDDAFE126C0ED310044106F /* UITableView+EXT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+EXT.swift"; sourceTree = "<group>"; };
 		3CDDAFE426C0FFE00044106F /* InputValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputValidation.swift; sourceTree = "<group>"; };
 		3CDDAFE726C1003D0044106F /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
+		3CDDAFEA26C100700044106F /* UITextField+EXT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+EXT.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +170,7 @@
 			children = (
 				3C04540226BCEE7F007C402F /* String+EXT.swift */,
 				3CDDAFE126C0ED310044106F /* UITableView+EXT.swift */,
+				3CDDAFEA26C100700044106F /* UITextField+EXT.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -425,6 +428,7 @@
 				3C0453BA26BBABDA007C402F /* ONVIFProfile.swift in Sources */,
 				3C71E80726BA5A2A001603E2 /* CameraViewController.swift in Sources */,
 				3C71E80326BA5A2A001603E2 /* AppDelegate.swift in Sources */,
+				3CDDAFEB26C100700044106F /* UITextField+EXT.swift in Sources */,
 				3C04541426BD0104007C402F /* CameraCell.swift in Sources */,
 				3C0453C026BBABDA007C402F /* ONVIFCredential.swift in Sources */,
 				3CDDAFE526C0FFE00044106F /* InputValidation.swift in Sources */,
