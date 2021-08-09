@@ -8,6 +8,9 @@
 import UIKit
 
 class AddDeviceManuallyViewController: UITableViewController, UITextFieldDelegate {
+    enum TableSection: Int {
+        case host = 0, port, username, password
+    }
     @IBOutlet weak var hostCell: TextInputCell!
     @IBOutlet weak var portCell: TextInputCell!
     @IBOutlet weak var usernameCell: TextInputCell!
@@ -54,6 +57,24 @@ private extension AddDeviceManuallyViewController {
 
         passwordCell.textField.textContentType = .password
         passwordCell.textField.isSecureTextEntry = true
+    }
+}
+
+extension AddDeviceManuallyViewController {
+    // MARK: - Table view data source
+
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        guard let tableSection = TableSection(rawValue: section) else { return nil }
+        switch tableSection {
+            case .host:
+                return "Host"
+            case .port:
+                return "Port"
+            case .username:
+                return "Username"
+            case .password:
+                return "Password"
+        }
     }
 }
 
