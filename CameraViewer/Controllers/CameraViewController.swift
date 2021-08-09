@@ -108,3 +108,56 @@ extension CameraViewController {
         return dahuaAPI.getRTSPStreamURL(channel: channel, streamType: streamType)
     }
 }
+
+extension CameraViewController {
+    // MARK: - Segue
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier {
+            case "showAddDevice":
+                showAddDevice(for: segue)
+            default:
+                preconditionFailure("Segue identifier did not match")
+        }
+    }
+
+    private func showAddDevice(for segue: UIStoryboardSegue) {
+        guard let navController = segue.destination as? UINavigationController else { return }
+        guard let topController = navController.topViewController else { return }
+        guard let viewController = topController as? AddDeviceViewController else { return }
+        viewController.deviceFilter = videoStreams
+
+        viewController.handler = { [unowned self] (device, credential) in
+            if let device = device {
+                if let url = self.getRTSPStreamURL(from: device.address,
+                                                   credential: credential,
+                                                   channel: "0",
+                                                   streamType: "0") {
+                    if let keychainQuery = self.generatePasswordQueryable(from: url) {
+                        self.saveToKeychain(credentials: credential, query: keychainQuery)
+                    }
+                }
+
+                device.channels.forEach { channel in
+                    if let url = self.getRTSPStreamURL(from: device.address,
+                                                       credential: credential,
+                                                       channel: channel.number,
+                                                       streamType: "0") {
+
+                        let dahuaQuery = DahuaQueryService(host: device.address,
+                                                           username: credential.username,
+                                                           password: credential.password)
+                        // Make a call to getAutoFocusStatus to ensure that the channel is active
+                        dahuaQuery.getAutoFocusStatus(for: channel.number, completion: { (_, error) in
+                            if error == nil {
+                                DispatchQueue.main.async {
+                                    self.add(stream: url)
+                                }
+                            }
+                        })
+                    }
+                }
+            }
+        }
+    }
+}
