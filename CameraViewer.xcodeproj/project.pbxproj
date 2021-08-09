@@ -40,6 +40,7 @@
 		3C71E80A26BA5A2A001603E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C71E80826BA5A2A001603E2 /* Main.storyboard */; };
 		3C71E80C26BA5A6A001603E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C71E80B26BA5A6A001603E2 /* Assets.xcassets */; };
 		3C71E80F26BA5A6A001603E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C71E80D26BA5A6A001603E2 /* LaunchScreen.storyboard */; };
+		3CDDAFD926C0D5D40044106F /* AddDeviceManually.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CDDAFD826C0D5D40044106F /* AddDeviceManually.storyboard */; };
 		5389F7F5A5FD0D5FC4CEAA22 /* Pods_CameraViewer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04EF8733F306E4BF56B443BB /* Pods_CameraViewer.framework */; };
 /* End PBXBuildFile section */
 
@@ -83,6 +84,7 @@
 		3C71E80B26BA5A6A001603E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3C71E80E26BA5A6A001603E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3C71E81026BA5A6A001603E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3CDDAFD826C0D5D40044106F /* AddDeviceManually.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddDeviceManually.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 				3C71E80826BA5A2A001603E2 /* Main.storyboard */,
 				3C71E80D26BA5A6A001603E2 /* LaunchScreen.storyboard */,
 				3C04542C26BFAF8D007C402F /* AddDevice.storyboard */,
+				3CDDAFD826C0D5D40044106F /* AddDeviceManually.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -330,6 +333,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C04542D26BFAF8D007C402F /* AddDevice.storyboard in Resources */,
+				3CDDAFD926C0D5D40044106F /* AddDeviceManually.storyboard in Resources */,
 				3C71E80F26BA5A6A001603E2 /* LaunchScreen.storyboard in Resources */,
 				3C71E80C26BA5A6A001603E2 /* Assets.xcassets in Resources */,
 				3C71E80A26BA5A2A001603E2 /* Main.storyboard in Resources */,
