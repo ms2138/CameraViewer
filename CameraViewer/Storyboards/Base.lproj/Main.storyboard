@@ -3,7 +3,6 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,7 +14,7 @@
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="KC0-CF-6wL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.20690786289999999" green="0.20901836300000001" blue="0.21384492890000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="uiV-KU-U0a">
                             <size key="itemSize" width="128" height="128"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -37,20 +36,38 @@
                             <outlet property="delegate" destination="Bog-Fz-3lt" id="rRH-Gz-4Vs"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="aex-zM-IAp"/>
+                    <navigationItem key="navigationItem" id="aex-zM-IAp">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="xeb-kT-ETi">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <segue destination="XDz-2X-K0C" kind="presentation" identifier="showAddDevice" id="4fL-K6-g6f"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vdg-bf-fTi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="791" y="139"/>
+        </scene>
+        <!--AddDevice-->
+        <scene sceneID="sHL-2z-cEQ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AddDevice" id="XDz-2X-K0C" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="rWl-gL-GS8"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ukM-p1-aZM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1492" y="61"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="O9i-Aw-T0K">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JFC-4O-Bm9" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="GzM-8z-UNb">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="GzM-8z-UNb">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.20690786289999999" green="0.20901836300000001" blue="0.21384492890000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -62,9 +79,4 @@
             <point key="canvasLocation" x="-220.28985507246378" y="138.61607142857142"/>
         </scene>
     </scenes>
-    <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-    </resources>
 </document>
