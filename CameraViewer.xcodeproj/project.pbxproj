@@ -44,6 +44,7 @@
 		3CDDAFDC26C0D7E80044106F /* AddDeviceManuallyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDAFDB26C0D7E80044106F /* AddDeviceManuallyViewController.swift */; };
 		3CDDAFDF26C0D92D0044106F /* TextInputCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDAFDE26C0D92D0044106F /* TextInputCell.swift */; };
 		3CDDAFE226C0ED310044106F /* UITableView+EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDAFE126C0ED310044106F /* UITableView+EXT.swift */; };
+		3CDDAFE526C0FFE00044106F /* InputValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDAFE426C0FFE00044106F /* InputValidation.swift */; };
 		5389F7F5A5FD0D5FC4CEAA22 /* Pods_CameraViewer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04EF8733F306E4BF56B443BB /* Pods_CameraViewer.framework */; };
 /* End PBXBuildFile section */
 
@@ -91,6 +92,7 @@
 		3CDDAFDB26C0D7E80044106F /* AddDeviceManuallyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDeviceManuallyViewController.swift; sourceTree = "<group>"; };
 		3CDDAFDE26C0D92D0044106F /* TextInputCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputCell.swift; sourceTree = "<group>"; };
 		3CDDAFE126C0ED310044106F /* UITableView+EXT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+EXT.swift"; sourceTree = "<group>"; };
+		3CDDAFE426C0FFE00044106F /* InputValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputValidation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,6 +221,7 @@
 			isa = PBXGroup;
 			children = (
 				3C04543726C0CEFE007C402F /* NoContentBackgroundView.swift */,
+				3CDDAFE426C0FFE00044106F /* InputValidation.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -420,6 +423,7 @@
 				3C71E80326BA5A2A001603E2 /* AppDelegate.swift in Sources */,
 				3C04541426BD0104007C402F /* CameraCell.swift in Sources */,
 				3C0453C026BBABDA007C402F /* ONVIFCredential.swift in Sources */,
+				3CDDAFE526C0FFE00044106F /* InputValidation.swift in Sources */,
 				3C04542626BF8BA8007C402F /* AddDeviceViewController.swift in Sources */,
 				3C71E80526BA5A2A001603E2 /* SceneDelegate.swift in Sources */,
 				3C04541F26BF8A51007C402F /* RTSPPasswordQueryable.swift in Sources */,
