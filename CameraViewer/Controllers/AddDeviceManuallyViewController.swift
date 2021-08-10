@@ -11,12 +11,16 @@ class AddDeviceManuallyViewController: UITableViewController, UITextFieldDelegat
     enum TableSection: Int {
         case host = 0, port, username, password
     }
+    typealias Port = Int
+    typealias Username = String
+    typealias Password = String
     @IBOutlet weak var hostCell: TextInputCell!
     @IBOutlet weak var portCell: TextInputCell!
     @IBOutlet weak var usernameCell: TextInputCell!
     @IBOutlet weak var passwordCell: TextInputCell!
     private var cells = [TextInputCell]()
-    
+    var handler: ((URL, Port, Username, Password) -> Void)?
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -57,6 +61,44 @@ private extension AddDeviceManuallyViewController {
 
         passwordCell.textField.textContentType = .password
         passwordCell.textField.isSecureTextEntry = true
+    }
+}
+
+extension AddDeviceManuallyViewController {
+    // MARK: - IBAction
+
+    @IBAction func done() {
+        for cell in cells.reversed() {
+            let textField = cell.textField
+            let validator = Validator()
+
+            switch textField.tag {
+                case 0:
+                    if textField.validate([validator.isURLValid]) == false {
+                        handleTextfieldValidation(in: textField,
+                                                  message: "Please enter a valid URL")
+                    }
+                case 1:
+                    if textField.validate([validator.isPortNumberValid]) == false {
+                        handleTextfieldValidation(in: textField,
+                                                  message: "Please enter a valid Port")
+                    }
+                case 2:
+                    if textField.validate([validator.isUsernameValid]) == false {
+                        handleTextfieldValidation(in: textField,
+                                                  message: "Please enter a valid username")
+                    }
+                default:
+                    break
+            }
+        }
+
+        if let host = hostCell.textField.text, let port = portCell.textField.text,
+           let username = usernameCell.textField.text, let password = passwordCell.textField.text {
+            if let url = URL(string: host), let port = Int(port) {
+                handler?(url, port, username, password)
+            }
+        }
     }
 }
 
