@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Rkg-w8-E9S">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Add Device View Controller-->
+        <!--Devices-->
         <scene sceneID="9PO-pg-P2k">
             <objects>
                 <tableViewController id="hac-R0-Uoy" customClass="AddDeviceViewController" customModule="CameraViewer" customModuleProvider="target" sceneMemberID="viewController">
@@ -62,7 +62,7 @@
                             <outlet property="delegate" destination="hac-R0-Uoy" id="MTr-HT-47v"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="pAp-5y-Bvu">
+                    <navigationItem key="navigationItem" title="Devices" id="pAp-5y-Bvu">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="xu7-eL-n5t">
                             <connections>
                                 <action selector="cancelWithSender:" destination="hac-R0-Uoy" id="gw3-U6-vQU"/>
