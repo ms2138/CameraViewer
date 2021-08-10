@@ -79,7 +79,19 @@ extension AddDeviceManuallyViewController {
 }
 
 extension AddDeviceManuallyViewController {
-    // MARK: - Text field changes
+    // MARK: - Text field validation and changes
+
+    func handleTextfieldValidation(in textField: UITextField, message: String) {
+        textField.text = ""
+        let placeholderTextColor = UIColor(red: 236.0/255.0, green: 75.0/255.0, blue: 75.0/255.0, alpha: 1.0)
+        textField.attributedPlaceholder = NSAttributedString(string: message,
+                                                             attributes:
+                                                                [NSAttributedString.Key.foregroundColor: placeholderTextColor])
+        textField.textColor = .red
+        textField.shake()
+
+        textField.becomeFirstResponder()
+    }
 
     @objc func textDidChange(sender: UITextField) {
         if sender.textColor == .red {
