@@ -11,7 +11,17 @@ class CameraViewController: UICollectionViewController {
     private let reuseIdentifier = "CameraCell"
 
     private var videoStreams = [URL]()
-    
+    @IBOutlet weak var selectionModeButtonItem: UIBarButtonItem!
+    private var deleteButtonItem: UIBarButtonItem!
+    var isSelecting: Bool = false {
+        didSet {
+            collectionView.allowsMultipleSelection = isSelecting
+            navigationController?.setToolbarHidden(!isSelecting, animated: true)
+
+            updateInterfaceForSelectionMode()
+        }
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -42,6 +52,39 @@ extension CameraViewController {
         cell.checkmark.checked = cell.isSelected
 
         return cell
+    }
+}
+
+extension CameraViewController {
+    // MARK: - Item Selection
+
+    @IBAction func toggleSelection() {
+        if isSelecting == true {
+            selectionModeButtonItem.title = "Select"
+            collectionView.deselectAllItems(animated: true)
+            isSelecting = false
+        } else {
+            selectionModeButtonItem.title = "Cancel"
+            isSelecting = true
+        }
+    }
+
+    func updateInterfaceForSelectionMode() {
+        guard let selectedPaths = collectionView.indexPathsForSelectedItems else {
+            return
+        }
+
+        let enableButtonItem = (selectedPaths.count > 0)
+        deleteButtonItem.isEnabled = enableButtonItem
+
+        switch selectedPaths.count {
+            case let selectionCount where selectionCount == 1:
+                title = "\(selectedPaths.count) item selected"
+            case let selectionCount where selectionCount > 1:
+                title = "\(selectedPaths.count) items selected"
+            default:
+                title = isSelecting ? "Select Items" : "Live View"
+        }
     }
 }
 
