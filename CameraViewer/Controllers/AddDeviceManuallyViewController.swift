@@ -23,6 +23,14 @@ class AddDeviceManuallyViewController: UITableViewController, UITextFieldDelegat
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        title = "Add Device"
+
+        let doneButtonItem = UIBarButtonItem(barButtonSystemItem: .done,
+                                             target: self,
+                                             action: #selector(done))
+        self.navigationItem.rightBarButtonItem = doneButtonItem
+
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -143,5 +151,21 @@ extension AddDeviceManuallyViewController {
                 sender.textColor = .black
             }
         }
+    }
+}
+
+extension AddDeviceManuallyViewController {
+    // MARK: - Text field delegate
+
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField.returnKeyType == .done {
+            textField.resignFirstResponder()
+            done()
+            return true
+        } else {
+            let cell = cells[(textField.tag + 1) % cells.count]
+            cell.textField.becomeFirstResponder()
+        }
+        return true
     }
 }
