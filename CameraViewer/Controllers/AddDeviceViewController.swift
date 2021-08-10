@@ -274,3 +274,28 @@ extension AddDeviceViewController {
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }
+
+extension AddDeviceViewController {
+    // MARK: - Segue
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier {
+            case "showAddDeviceManually":
+                guard let addDeviceManuallyController = segue.destination as?
+                        AddDeviceManuallyViewController else { return }
+                addDeviceManuallyController.handler = { [weak self] (url, _, username, password) in
+                    guard let weakSelf = self else { return }
+                    weakSelf.createDevice(from: url.absoluteString,
+                                          username: username,
+                                          password: password,
+                                          completion: { (device, credential) in
+                                            weakSelf.dismiss(animated: true) {
+                                                weakSelf.handler?(device, credential)
+                                            }
+                                          })
+                }
+            default:
+                preconditionFailure("Segue identifier did not match")
+        }
+    }
+}
