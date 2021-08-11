@@ -129,7 +129,42 @@ extension CameraViewController {
 }
 
 extension CameraViewController {
-    // MARK: - Adding streams
+    // MARK: - Adding and deleting streams
+
+    @objc func deleteSelectedItems() {
+        if let selectedPaths = collectionView.indexPathsForSelectedItems {
+            let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+
+            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+
+            let deleteAction = UIAlertAction(title: "Delete", style: .destructive) { [unowned self] _ in
+                self.deleteItems(at: selectedPaths)
+                self.updateInterfaceForSelectionMode()
+            }
+
+            alertController.addAction(cancelAction)
+            alertController.addAction(deleteAction)
+
+            present(alertController, animated: true)
+        }
+    }
+
+    func deleteItems(at indexPaths: [IndexPath]) {
+        var deleteVideoStreams = [URL]()
+        indexPaths.forEach { indexPath in
+            deleteVideoStreams.append(videoStreams[indexPath.row])
+        }
+
+        videoStreams.removeElements(in: deleteVideoStreams)
+
+        collectionView.performBatchUpdates({
+            self.collectionView.deleteItems(at: indexPaths)
+        }, completion: nil)
+
+        if videoStreams.count == 0 {
+            toggleSelection()
+        }
+    }
 
     func add(stream: URL) {
         videoStreams.append(stream)
