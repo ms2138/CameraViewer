@@ -62,6 +62,27 @@ extension CameraViewController {
 }
 
 extension CameraViewController {
+    // MARK: - Collection view delegate
+
+    override func collectionView(_ collectionView: UICollectionView,
+                                 shouldSelectItemAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard isSelecting else { return }
+
+        updateInterfaceForSelectionMode()
+    }
+
+    override func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        guard isSelecting else { return }
+
+        updateInterfaceForSelectionMode()
+    }
+}
+
+extension CameraViewController {
     // MARK: - Item Selection
 
     @IBAction func toggleSelection() {
