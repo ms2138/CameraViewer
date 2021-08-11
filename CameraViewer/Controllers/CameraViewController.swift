@@ -24,7 +24,13 @@ class CameraViewController: UICollectionViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
+        deleteButtonItem = UIBarButtonItem(barButtonSystemItem: .trash,
+                                           target: self,
+                                           action: #selector(deleteSelectedItems))
+        deleteButtonItem.isEnabled = false
+
+        setToolbarItems([deleteButtonItem], animated: true)
     }
 
 
