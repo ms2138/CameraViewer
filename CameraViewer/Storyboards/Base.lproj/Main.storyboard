@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Camera View Controller-->
+        <!--Live-->
         <scene sceneID="qgH-6E-2Iz">
             <objects>
                 <collectionViewController id="Bog-Fz-3lt" customClass="CameraViewController" customModule="CameraViewer" customModuleProvider="target" sceneMemberID="viewController">
@@ -36,7 +36,7 @@
                             <outlet property="delegate" destination="Bog-Fz-3lt" id="rRH-Gz-4Vs"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="aex-zM-IAp">
+                    <navigationItem key="navigationItem" title="Live" id="aex-zM-IAp">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="xeb-kT-ETi">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
