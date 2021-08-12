@@ -217,6 +217,7 @@ extension AddDeviceViewController {
         if indexPath.section == 0 {
             if discoveredDevices.count > 0 {
                 let device = discoveredDevices[indexPath.row]
+                cell.textLabel?.textColor = .black
                 cell.textLabel?.text = device.model
                 cell.detailTextLabel?.text = device.ipAddress
                 cell.isUserInteractionEnabled = true
