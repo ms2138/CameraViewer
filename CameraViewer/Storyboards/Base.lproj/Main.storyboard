@@ -3,7 +3,6 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
-        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -15,20 +14,46 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.20690786289999999" green="0.20901836300000001" blue="0.21384492890000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="uiV-KU-U0a">
-                            <size key="itemSize" width="128" height="128"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="uiV-KU-U0a">
+                            <size key="itemSize" width="200" height="200"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CameraCell" id="ca5-LI-0oJ" customClass="CameraCell" customModule="CameraViewer" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="HGj-oP-e3e">
-                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                </collectionViewCellContentView>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L54-Lh-dTR" customClass="CameraView" customModule="CameraViewer" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                            <color key="backgroundColor" red="0.1960784314" green="0.1960784314" blue="0.20784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W42-DJ-i4F" customClass="DTCheckMarkView" customModule="CameraViewer" customModuleProvider="target">
+                                            <rect key="frame" x="157" y="157" width="35" height="35"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="35" id="Qry-RA-z4X"/>
+                                                <constraint firstAttribute="height" constant="35" id="jeZ-rg-7iv"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="L54-Lh-dTR" firstAttribute="leading" secondItem="ca5-LI-0oJ" secondAttribute="leading" id="42f-Xk-hfy"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="W42-DJ-i4F" secondAttribute="trailing" id="8Py-d9-UkF"/>
+                                    <constraint firstItem="L54-Lh-dTR" firstAttribute="top" secondItem="ca5-LI-0oJ" secondAttribute="top" id="KwC-vV-s20"/>
+                                    <constraint firstAttribute="trailing" secondItem="L54-Lh-dTR" secondAttribute="trailing" id="ifb-rT-Uja"/>
+                                    <constraint firstAttribute="bottom" secondItem="L54-Lh-dTR" secondAttribute="bottom" id="lXD-NT-4Dv"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="W42-DJ-i4F" secondAttribute="bottom" id="yQd-mU-fVr"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="cameraView" destination="L54-Lh-dTR" id="c9n-Ou-U8z"/>
+                                    <outlet property="checkmark" destination="W42-DJ-i4F" id="Z2x-j1-K8i"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -37,6 +62,12 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" title="Live" id="aex-zM-IAp">
+                        <barButtonItem key="leftBarButtonItem" title="Select" id="VSE-PU-Vhi">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="toggleSelection" destination="Bog-Fz-3lt" id="tuC-Og-umI"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="xeb-kT-ETi">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
@@ -44,6 +75,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="selectionModeButtonItem" destination="VSE-PU-Vhi" id="kzk-aN-3tr"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vdg-bf-fTi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -70,6 +104,11 @@
                         <color key="barTintColor" red="0.20690786289999999" green="0.20901836300000001" blue="0.21384492890000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Vnc-y2-aMz">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.12941176469999999" green="0.12941176469999999" blue="0.12941176469999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </toolbar>
                     <connections>
                         <segue destination="Bog-Fz-3lt" kind="relationship" relationship="rootViewController" id="Ees-TJ-6cy"/>
                     </connections>
