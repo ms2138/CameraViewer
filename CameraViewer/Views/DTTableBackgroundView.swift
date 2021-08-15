@@ -51,13 +51,13 @@ class DTTableBackgroundView: UIView {
 }
 
 extension DTTableBackgroundView {
-    func startLoadingOperation() {
-        messageLabel.text = "Loading"
+    func startLoadingOperation(message: String = "Loading...") {
+        messageLabel.text = message
         activityIndicator.startAnimating()
     }
 
-    func stopLoadingOperation() {
-        messageLabel.text = ""
+    func stopLoadingOperation(message: String = "") {
+        messageLabel.text = message
         activityIndicator.stopAnimating()
     }
 }
