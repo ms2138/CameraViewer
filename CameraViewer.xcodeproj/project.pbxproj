@@ -49,6 +49,7 @@
 		3CDDAFEB26C100700044106F /* UITextField+EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDAFEA26C100700044106F /* UITextField+EXT.swift */; };
 		3CDDAFEE26C24D780044106F /* UICollectionView+EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDAFED26C24D780044106F /* UICollectionView+EXT.swift */; };
 		3CDDAFF126C396450044106F /* Array+EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDAFF026C396450044106F /* Array+EXT.swift */; };
+		3CDDAFF826C9CCE60044106F /* VideoStreamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDAFF726C9CCE60044106F /* VideoStreamViewController.swift */; };
 		5389F7F5A5FD0D5FC4CEAA22 /* Pods_CameraViewer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04EF8733F306E4BF56B443BB /* Pods_CameraViewer.framework */; };
 /* End PBXBuildFile section */
 
@@ -101,6 +102,7 @@
 		3CDDAFEA26C100700044106F /* UITextField+EXT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+EXT.swift"; sourceTree = "<group>"; };
 		3CDDAFED26C24D780044106F /* UICollectionView+EXT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+EXT.swift"; sourceTree = "<group>"; };
 		3CDDAFF026C396450044106F /* Array+EXT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+EXT.swift"; sourceTree = "<group>"; };
+		3CDDAFF726C9CCE60044106F /* VideoStreamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoStreamViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +199,7 @@
 				3C71E80626BA5A2A001603E2 /* CameraViewController.swift */,
 				3C04542526BF8BA8007C402F /* AddDeviceViewController.swift */,
 				3CDDAFDB26C0D7E80044106F /* AddDeviceManuallyViewController.swift */,
+				3CDDAFF726C9CCE60044106F /* VideoStreamViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -445,6 +448,7 @@
 				3C04541F26BF8A51007C402F /* RTSPPasswordQueryable.swift in Sources */,
 				3C04541726BD01CE007C402F /* DTCheckMarkView.swift in Sources */,
 				3C04543826C0CEFE007C402F /* NoContentBackgroundView.swift in Sources */,
+				3CDDAFF826C9CCE60044106F /* VideoStreamViewController.swift in Sources */,
 				3CDDAFDC26C0D7E80044106F /* AddDeviceManuallyViewController.swift in Sources */,
 				3C0453D026BBACDF007C402F /* UDPBroadcastConnectionError.swift in Sources */,
 				3C04540326BCEE7F007C402F /* String+EXT.swift in Sources */,
