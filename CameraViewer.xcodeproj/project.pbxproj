@@ -50,6 +50,7 @@
 		3CDDAFEE26C24D780044106F /* UICollectionView+EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDAFED26C24D780044106F /* UICollectionView+EXT.swift */; };
 		3CDDAFF126C396450044106F /* Array+EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDAFF026C396450044106F /* Array+EXT.swift */; };
 		3CDDAFF826C9CCE60044106F /* VideoStreamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDAFF726C9CCE60044106F /* VideoStreamViewController.swift */; };
+		3CDDAFFB26C9CD1F0044106F /* VideoStream.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CDDAFFA26C9CD1F0044106F /* VideoStream.storyboard */; };
 		5389F7F5A5FD0D5FC4CEAA22 /* Pods_CameraViewer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04EF8733F306E4BF56B443BB /* Pods_CameraViewer.framework */; };
 /* End PBXBuildFile section */
 
@@ -103,6 +104,7 @@
 		3CDDAFED26C24D780044106F /* UICollectionView+EXT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+EXT.swift"; sourceTree = "<group>"; };
 		3CDDAFF026C396450044106F /* Array+EXT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+EXT.swift"; sourceTree = "<group>"; };
 		3CDDAFF726C9CCE60044106F /* VideoStreamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoStreamViewController.swift; sourceTree = "<group>"; };
+		3CDDAFFA26C9CD1F0044106F /* VideoStream.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = VideoStream.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +158,7 @@
 				3C71E80D26BA5A6A001603E2 /* LaunchScreen.storyboard */,
 				3C04542C26BFAF8D007C402F /* AddDevice.storyboard */,
 				3CDDAFD826C0D5D40044106F /* AddDeviceManually.storyboard */,
+				3CDDAFFA26C9CD1F0044106F /* VideoStream.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -363,6 +366,7 @@
 				3CDDAFD926C0D5D40044106F /* AddDeviceManually.storyboard in Resources */,
 				3C71E80F26BA5A6A001603E2 /* LaunchScreen.storyboard in Resources */,
 				3C71E80C26BA5A6A001603E2 /* Assets.xcassets in Resources */,
+				3CDDAFFB26C9CD1F0044106F /* VideoStream.storyboard in Resources */,
 				3C71E80A26BA5A2A001603E2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
