@@ -64,6 +64,8 @@ extension AddDeviceViewController {
     // MARK: - Create and find devices
 
     private func performDeviceDiscovery(filter: [URL]? = nil) {
+        backgroundView.startLoadingOperation()
+
         let hosts = filter?.compactMap { $0.host }
 
         getDevice { [weak self] (device) in
@@ -80,6 +82,8 @@ extension AddDeviceViewController {
                 weakSelf.tableView.reloadSections(IndexSet(integer: 0), with: .fade)
 
                 if weakSelf.discoveredDevices.count == 0 {
+                    weakSelf.backgroundView.stopLoadingOperation(message: "No results found")
+                } else {
                     weakSelf.backgroundView.stopLoadingOperation()
                 }
             }
