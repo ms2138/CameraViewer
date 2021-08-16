@@ -18,6 +18,9 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b4f-z3-bVy" customClass="CameraView" customModule="CameraViewer" customModuleProvider="target">
                                 <rect key="frame" x="44" y="44" width="808" height="300"/>
                                 <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="1YL-ZE-7cM" appends="YES" id="6MB-gB-u6Y"/>
+                                </connections>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ifE-xB-EX1"/>
@@ -30,13 +33,25 @@
                         </constraints>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="TwS-eb-hfQ"/>
+                    <navigationItem key="navigationItem" id="TwS-eb-hfQ">
+                        <barButtonItem key="leftBarButtonItem" title="Close" id="TCV-t4-Iww">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="closeWithSender:" destination="xcv-3p-9DW" id="R8x-8n-QRZ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="cameraView" destination="b4f-z3-bVy" id="4jc-VJ-Qje"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pce-4m-J5S" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="1YL-ZE-7cM">
+                    <connections>
+                        <action selector="handleTapWithGesture:" destination="xcv-3p-9DW" id="qOt-6X-lfz"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="883.25892857142856" y="121.73913043478262"/>
         </scene>
