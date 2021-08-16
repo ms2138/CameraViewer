@@ -21,5 +21,26 @@ class VideoStreamViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        guard let url = videoStreamURL else { return }
+
+        if let ipAddress = url.host {
+            if let query = url.query?.split(separator: "&").filter({ $0.contains("channel") }).first {
+                let channel = query.localizedCapitalized.split(separator: "=").joined(separator: " ")
+                title = "\(ipAddress) - \(channel)"
+            }
+        }
+
+        cameraView.textLabel.font = UIFont.systemFont(ofSize: 40.0)
+
+        loadVideoStream(for: url)
+    }
+}
+
+extension VideoStreamViewController {
+    // MARK: Loading video and events
+
+    func loadVideoStream(for url: URL) {
+        cameraView.loadVideo(from: url)
     }
 }
