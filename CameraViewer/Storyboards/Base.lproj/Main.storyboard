@@ -53,6 +53,7 @@
                                 <connections>
                                     <outlet property="cameraView" destination="L54-Lh-dTR" id="c9n-Ou-U8z"/>
                                     <outlet property="checkmark" destination="W42-DJ-i4F" id="Z2x-j1-K8i"/>
+                                    <segue destination="BBP-4N-vrR" kind="show" identifier="showVideoStream" id="4vR-WE-bQc"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -116,6 +117,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nop-qv-xCd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-220.28985507246378" y="138.61607142857142"/>
+        </scene>
+        <!--VideoStream-->
+        <scene sceneID="XAh-zA-XuH">
+            <objects>
+                <viewControllerPlaceholder storyboardName="VideoStream" id="BBP-4N-vrR" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="RTl-hd-HLB"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vOh-7f-bjR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1540" y="224"/>
         </scene>
     </scenes>
 </document>
