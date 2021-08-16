@@ -44,3 +44,18 @@ extension VideoStreamViewController {
         cameraView.loadVideo(from: url)
     }
 }
+
+extension VideoStreamViewController {
+    // MARK: IBActions
+
+    @IBAction func close(sender: UIBarButtonItem) {
+        dismiss(animated: true, completion: nil)
+    }
+
+    @IBAction func handleTap(gesture: UITapGestureRecognizer) {
+        if let hidden = navigationController?.isNavigationBarHidden {
+            navigationController?.setNavigationBarHidden(!hidden, animated: true)
+            navigationController?.setToolbarHidden(!hidden, animated: true)
+        }
+    }
+}
