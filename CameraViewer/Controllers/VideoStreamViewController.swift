@@ -33,7 +33,17 @@ class VideoStreamViewController: UIViewController {
 
         cameraView.textLabel.font = UIFont.systemFont(ofSize: 40.0)
 
+        navigationController?.setNavigationBarHidden(true, animated: false)
+        navigationController?.setToolbarHidden(true, animated: false)
+
         loadVideoStream(for: url)
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        let value = UIInterfaceOrientation.landscapeLeft.rawValue
+        UIDevice.current.setValue(value, forKey: "orientation")
     }
 }
 
@@ -57,5 +67,17 @@ extension VideoStreamViewController {
             navigationController?.setNavigationBarHidden(!hidden, animated: true)
             navigationController?.setToolbarHidden(!hidden, animated: true)
         }
+    }
+}
+
+extension VideoStreamViewController {
+    // MARK: Device Orientation
+
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return .landscape
+    }
+
+    override var shouldAutorotate: Bool {
+        return true
     }
 }
