@@ -1,7 +1,68 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FgC-zy-PjC">
+    <device id="retina6_1" orientation="landscape" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--Video Stream View Controller-->
+        <scene sceneID="vMh-uf-Ayw">
+            <objects>
+                <viewController id="xcv-3p-9DW" customClass="VideoStreamViewController" customModule="CameraViewer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Vrt-xb-C8B">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b4f-z3-bVy" customClass="CameraView" customModule="CameraViewer" customModuleProvider="target">
+                                <rect key="frame" x="44" y="44" width="808" height="300"/>
+                                <gestureRecognizers/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ifE-xB-EX1"/>
+                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="b4f-z3-bVy" firstAttribute="bottom" secondItem="ifE-xB-EX1" secondAttribute="bottom" id="40U-5U-DPX"/>
+                            <constraint firstItem="ifE-xB-EX1" firstAttribute="trailing" secondItem="b4f-z3-bVy" secondAttribute="trailing" id="4uc-Ic-0kF"/>
+                            <constraint firstItem="b4f-z3-bVy" firstAttribute="leading" secondItem="ifE-xB-EX1" secondAttribute="leading" id="bte-Lc-dcp"/>
+                            <constraint firstItem="b4f-z3-bVy" firstAttribute="top" secondItem="ifE-xB-EX1" secondAttribute="top" id="qIu-Wq-GCZ"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="TwS-eb-hfQ"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="cameraView" destination="b4f-z3-bVy" id="4jc-VJ-Qje"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pce-4m-J5S" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="883.25892857142856" y="121.73913043478262"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="9iq-7A-NTb">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" toolbarHidden="NO" id="FgC-zy-PjC" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="5j8-2N-jEx">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="FAB-JK-feq">
+                        <rect key="frame" x="0.0" y="344" width="896" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="xcv-3p-9DW" kind="relationship" relationship="rootViewController" id="sAZ-v7-xVO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="STE-8k-QT8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139.95535714285714" y="121.73913043478262"/>
+        </scene>
+    </scenes>
 </document>
