@@ -294,10 +294,19 @@ extension CameraViewController {
 extension CameraViewController {
     // MARK: - Segue
 
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if identifier == "showVideoStream" && isSelecting == true {
+            return false
+        }
+        return true
+    }
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.identifier {
             case "showAddDevice":
                 showAddDevice(for: segue)
+            case "showVideoStream":
+                showVideoStream(for: segue)
             default:
                 preconditionFailure("Segue identifier did not match")
         }
@@ -340,6 +349,18 @@ extension CameraViewController {
                     }
                 }
             }
+        }
+    }
+
+    private func showVideoStream(for segue: UIStoryboardSegue) {
+        if let selectedIndexPaths = collectionView.indexPathsForSelectedItems,
+           let selectedItem = selectedIndexPaths.first {
+            collectionView.deselectItem(at: selectedItem, animated: false)
+            guard let navController = segue.destination as? UINavigationController else { return }
+            guard let videoStreamViewController = navController.topViewController as?
+                    VideoStreamViewController else { return }
+            let authorizedStream = videoStreams[selectedItem.row]
+            videoStreamViewController.videoStreamURL = authorizedStream
         }
     }
 }
