@@ -51,6 +51,7 @@
 		3CDDAFF126C396450044106F /* Array+EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDAFF026C396450044106F /* Array+EXT.swift */; };
 		3CDDAFF826C9CCE60044106F /* VideoStreamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDAFF726C9CCE60044106F /* VideoStreamViewController.swift */; };
 		3CDDAFFB26C9CD1F0044106F /* VideoStream.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CDDAFFA26C9CD1F0044106F /* VideoStream.storyboard */; };
+		3CDDAFFE26CB73220044106F /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDAFFD26CB73220044106F /* EventsViewController.swift */; };
 		5389F7F5A5FD0D5FC4CEAA22 /* Pods_CameraViewer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04EF8733F306E4BF56B443BB /* Pods_CameraViewer.framework */; };
 /* End PBXBuildFile section */
 
@@ -105,6 +106,7 @@
 		3CDDAFF026C396450044106F /* Array+EXT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+EXT.swift"; sourceTree = "<group>"; };
 		3CDDAFF726C9CCE60044106F /* VideoStreamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoStreamViewController.swift; sourceTree = "<group>"; };
 		3CDDAFFA26C9CD1F0044106F /* VideoStream.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = VideoStream.storyboard; sourceTree = "<group>"; };
+		3CDDAFFD26CB73220044106F /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,6 +205,7 @@
 				3C04542526BF8BA8007C402F /* AddDeviceViewController.swift */,
 				3CDDAFDB26C0D7E80044106F /* AddDeviceManuallyViewController.swift */,
 				3CDDAFF726C9CCE60044106F /* VideoStreamViewController.swift */,
+				3CDDAFFD26CB73220044106F /* EventsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -440,6 +443,7 @@
 				3C0453BC26BBABDA007C402F /* ONVIFQueryService.swift in Sources */,
 				3C0453FF26BCEDAB007C402F /* Event.swift in Sources */,
 				3C0453BA26BBABDA007C402F /* ONVIFProfile.swift in Sources */,
+				3CDDAFFE26CB73220044106F /* EventsViewController.swift in Sources */,
 				3C71E80726BA5A2A001603E2 /* CameraViewController.swift in Sources */,
 				3C71E80326BA5A2A001603E2 /* AppDelegate.swift in Sources */,
 				3CDDAFEB26C100700044106F /* UITextField+EXT.swift in Sources */,
