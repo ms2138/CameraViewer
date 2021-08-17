@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b4f-z3-bVy" customClass="CameraView" customModule="CameraViewer" customModuleProvider="target">
-                                <rect key="frame" x="44" y="44" width="808" height="300"/>
+                                <rect key="frame" x="44" y="0.0" width="808" height="414"/>
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="1YL-ZE-7cM" appends="YES" id="6MB-gB-u6Y"/>
@@ -24,12 +24,12 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ifE-xB-EX1"/>
-                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="b4f-z3-bVy" firstAttribute="bottom" secondItem="ifE-xB-EX1" secondAttribute="bottom" id="40U-5U-DPX"/>
+                            <constraint firstItem="b4f-z3-bVy" firstAttribute="bottom" secondItem="Vrt-xb-C8B" secondAttribute="bottom" id="40U-5U-DPX"/>
                             <constraint firstItem="ifE-xB-EX1" firstAttribute="trailing" secondItem="b4f-z3-bVy" secondAttribute="trailing" id="4uc-Ic-0kF"/>
                             <constraint firstItem="b4f-z3-bVy" firstAttribute="leading" secondItem="ifE-xB-EX1" secondAttribute="leading" id="bte-Lc-dcp"/>
-                            <constraint firstItem="b4f-z3-bVy" firstAttribute="top" secondItem="ifE-xB-EX1" secondAttribute="top" id="qIu-Wq-GCZ"/>
+                            <constraint firstItem="b4f-z3-bVy" firstAttribute="top" secondItem="Vrt-xb-C8B" secondAttribute="top" id="qIu-Wq-GCZ"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
