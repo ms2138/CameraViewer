@@ -52,6 +52,7 @@
 		3CDDAFF826C9CCE60044106F /* VideoStreamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDAFF726C9CCE60044106F /* VideoStreamViewController.swift */; };
 		3CDDAFFB26C9CD1F0044106F /* VideoStream.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CDDAFFA26C9CD1F0044106F /* VideoStream.storyboard */; };
 		3CDDAFFE26CB73220044106F /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDAFFD26CB73220044106F /* EventsViewController.swift */; };
+		3CDDB00126CB74070044106F /* Date+EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDB00026CB74070044106F /* Date+EXT.swift */; };
 		5389F7F5A5FD0D5FC4CEAA22 /* Pods_CameraViewer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04EF8733F306E4BF56B443BB /* Pods_CameraViewer.framework */; };
 /* End PBXBuildFile section */
 
@@ -107,6 +108,7 @@
 		3CDDAFF726C9CCE60044106F /* VideoStreamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoStreamViewController.swift; sourceTree = "<group>"; };
 		3CDDAFFA26C9CD1F0044106F /* VideoStream.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = VideoStream.storyboard; sourceTree = "<group>"; };
 		3CDDAFFD26CB73220044106F /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
+		3CDDB00026CB74070044106F /* Date+EXT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+EXT.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +186,7 @@
 				3CDDAFEA26C100700044106F /* UITextField+EXT.swift */,
 				3CDDAFED26C24D780044106F /* UICollectionView+EXT.swift */,
 				3CDDAFF026C396450044106F /* Array+EXT.swift */,
+				3CDDB00026CB74070044106F /* Date+EXT.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -450,6 +453,7 @@
 				3C04541426BD0104007C402F /* CameraCell.swift in Sources */,
 				3C0453C026BBABDA007C402F /* ONVIFCredential.swift in Sources */,
 				3CDDAFE526C0FFE00044106F /* InputValidation.swift in Sources */,
+				3CDDB00126CB74070044106F /* Date+EXT.swift in Sources */,
 				3C04542626BF8BA8007C402F /* AddDeviceViewController.swift in Sources */,
 				3CDDAFF126C396450044106F /* Array+EXT.swift in Sources */,
 				3C71E80526BA5A2A001603E2 /* SceneDelegate.swift in Sources */,
