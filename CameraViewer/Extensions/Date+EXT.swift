@@ -17,4 +17,15 @@ extension Date {
         dateFormatter.dateFormat = format
         return dateFormatter.string(from: self)
     }
+
+    var startOfDay: Date {
+        let calendar = Calendar(identifier: .gregorian)
+        return calendar.startOfDay(for: self)
+    }
+
+    var nextDay: Date? {
+        let calendar = Calendar(identifier: .gregorian)
+        let date = calendar.startOfDay(for: self)
+        return calendar.date(byAdding: .day, value: 1, to: date)
+    }
 }
