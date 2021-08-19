@@ -11,6 +11,7 @@ class EventsViewController: UITableViewController, NoContentBackgroundView {
     private let reuseIdentifier = "EventCell"
     
     var events: [Event]?
+    var handler: ((Event) -> Void)?
     let backgroundView = DTTableBackgroundView(frame: .zero)
     var textColor: UIColor = .white {
         willSet {
@@ -68,6 +69,18 @@ extension EventsViewController {
                 }
             }
         }
+    }
+}
+
+extension EventsViewController {
+    // MARK: - Table view delegate
+
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let events = events {
+            let event = events[indexPath.row]
+            handler?(event)
+        }
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 
