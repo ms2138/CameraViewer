@@ -15,6 +15,17 @@ class EventsViewController: UITableViewController, NoContentBackgroundView {
             backgroundView.messageLabel.textColor = newValue
         }
     }
+    var separatorColor: UIColor = .white {
+        willSet {
+            tableView.separatorColor = newValue
+        }
+    }
+    var backgroundColor: UIColor = .black {
+        willSet {
+            tableView.backgroundColor = newValue
+        }
+    }
+    var selectedColor: UIColor = .gray
     
     override func viewDidLoad() {
         super.viewDidLoad()
