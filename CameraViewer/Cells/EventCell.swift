@@ -10,6 +10,24 @@ import UIKit
 class EventCell: UITableViewCell {
     private let stackView: UIStackView
     let timeLabel: UILabel
+    override var backgroundColor: UIColor? {
+        willSet {
+            contentView.backgroundColor = newValue
+            timeLabel.backgroundColor = newValue
+        }
+    }
+    var selectedColor: UIColor? {
+        willSet {
+            let view = UIView()
+            view.backgroundColor = newValue
+            selectedBackgroundView = view
+        }
+    }
+    var timeLabelFont: UIFont? {
+        willSet {
+            timeLabel.font = newValue
+        }
+    }
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         timeLabel = UILabel(frame: .zero)
