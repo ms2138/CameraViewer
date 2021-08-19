@@ -53,6 +53,7 @@
 		3CDDAFFB26C9CD1F0044106F /* VideoStream.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CDDAFFA26C9CD1F0044106F /* VideoStream.storyboard */; };
 		3CDDAFFE26CB73220044106F /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDAFFD26CB73220044106F /* EventsViewController.swift */; };
 		3CDDB00126CB74070044106F /* Date+EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDB00026CB74070044106F /* Date+EXT.swift */; };
+		3CDDB00426CE13D60044106F /* DateTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDB00326CE13D60044106F /* DateTime.swift */; };
 		5389F7F5A5FD0D5FC4CEAA22 /* Pods_CameraViewer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04EF8733F306E4BF56B443BB /* Pods_CameraViewer.framework */; };
 /* End PBXBuildFile section */
 
@@ -109,6 +110,7 @@
 		3CDDAFFA26C9CD1F0044106F /* VideoStream.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = VideoStream.storyboard; sourceTree = "<group>"; };
 		3CDDAFFD26CB73220044106F /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
 		3CDDB00026CB74070044106F /* Date+EXT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+EXT.swift"; sourceTree = "<group>"; };
+		3CDDB00326CE13D60044106F /* DateTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTime.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -237,6 +239,7 @@
 			children = (
 				3C04543026BFB467007C402F /* Logging.swift */,
 				3CDDAFE726C1003D0044106F /* Validator.swift */,
+				3CDDB00326CE13D60044106F /* DateTime.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -458,6 +461,7 @@
 				3CDDAFF126C396450044106F /* Array+EXT.swift in Sources */,
 				3C71E80526BA5A2A001603E2 /* SceneDelegate.swift in Sources */,
 				3C04541F26BF8A51007C402F /* RTSPPasswordQueryable.swift in Sources */,
+				3CDDB00426CE13D60044106F /* DateTime.swift in Sources */,
 				3C04541726BD01CE007C402F /* DTCheckMarkView.swift in Sources */,
 				3C04543826C0CEFE007C402F /* NoContentBackgroundView.swift in Sources */,
 				3CDDAFF826C9CCE60044106F /* VideoStreamViewController.swift in Sources */,
