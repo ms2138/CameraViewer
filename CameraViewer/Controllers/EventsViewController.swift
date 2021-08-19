@@ -7,11 +7,27 @@
 
 import UIKit
 
-class EventsViewController: UITableViewController {
+class EventsViewController: UITableViewController, NoContentBackgroundView {
     var events: [Event]?
+    let backgroundView = DTTableBackgroundView(frame: .zero)
+    var textColor: UIColor = .white {
+        willSet {
+            backgroundView.messageLabel.textColor = newValue
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+}
+
+private extension EventsViewController {
+    func setupBackgroundView() {
+        backgroundView.frame = view.frame
+        tableView.backgroundView = backgroundView
+        backgroundView.messageLabel.textColor = textColor
+        backgroundView.messageLabel.text = "No Events Found"
+        hideBackgroundView()
     }
 }
 
