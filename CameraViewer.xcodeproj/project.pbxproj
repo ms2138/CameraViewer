@@ -58,6 +58,9 @@
 		3CDDB00D26D22B830044106F /* SlideInPresentationAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDB00A26D22B830044106F /* SlideInPresentationAnimator.swift */; };
 		3CDDB00E26D22B830044106F /* SlideInPresentationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDB00B26D22B830044106F /* SlideInPresentationManager.swift */; };
 		3CDDB00F26D22B830044106F /* SlideInPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDB00C26D22B830044106F /* SlideInPresentationController.swift */; };
+		3CDDB01426D36D700044106F /* JSONDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDB01226D36D700044106F /* JSONDataManager.swift */; };
+		3CDDB01526D36D700044106F /* JSONFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDB01326D36D700044106F /* JSONFileManager.swift */; };
+		3CDDB01826D36ED00044106F /* FileManager+EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDDB01726D36ED00044106F /* FileManager+EXT.swift */; };
 		5389F7F5A5FD0D5FC4CEAA22 /* Pods_CameraViewer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04EF8733F306E4BF56B443BB /* Pods_CameraViewer.framework */; };
 /* End PBXBuildFile section */
 
@@ -119,6 +122,9 @@
 		3CDDB00A26D22B830044106F /* SlideInPresentationAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideInPresentationAnimator.swift; sourceTree = "<group>"; };
 		3CDDB00B26D22B830044106F /* SlideInPresentationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideInPresentationManager.swift; sourceTree = "<group>"; };
 		3CDDB00C26D22B830044106F /* SlideInPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideInPresentationController.swift; sourceTree = "<group>"; };
+		3CDDB01226D36D700044106F /* JSONDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONDataManager.swift; sourceTree = "<group>"; };
+		3CDDB01326D36D700044106F /* JSONFileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONFileManager.swift; sourceTree = "<group>"; };
+		3CDDB01726D36ED00044106F /* FileManager+EXT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+EXT.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +203,7 @@
 				3CDDAFED26C24D780044106F /* UICollectionView+EXT.swift */,
 				3CDDAFF026C396450044106F /* Array+EXT.swift */,
 				3CDDB00026CB74070044106F /* Date+EXT.swift */,
+				3CDDB01726D36ED00044106F /* FileManager+EXT.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -284,6 +291,7 @@
 		3C71E80126BA5A2A001603E2 /* CameraViewer */ = {
 			isa = PBXGroup;
 			children = (
+				3CDDB01126D36D620044106F /* Data Managers */,
 				3C04543626C0CEE7007C402F /* Protocols */,
 				3C04542F26BFB457007C402F /* Helpers */,
 				3C04541926BF8A50007C402F /* Keychain */,
@@ -313,6 +321,15 @@
 				3CDDB00B26D22B830044106F /* SlideInPresentationManager.swift */,
 			);
 			path = Presentation;
+			sourceTree = "<group>";
+		};
+		3CDDB01126D36D620044106F /* Data Managers */ = {
+			isa = PBXGroup;
+			children = (
+				3CDDB01226D36D700044106F /* JSONDataManager.swift */,
+				3CDDB01326D36D700044106F /* JSONFileManager.swift */,
+			);
+			path = "Data Managers";
 			sourceTree = "<group>";
 		};
 		A693C4F0D5AC84718EC70103 /* Pods */ = {
@@ -452,6 +469,7 @@
 				3C04541E26BF8A51007C402F /* KeychainQueryable.swift in Sources */,
 				3C0453BE26BBABDA007C402F /* ONVIFRequest.swift in Sources */,
 				3C0453FC26BCEC94007C402F /* Credential.swift in Sources */,
+				3CDDB01526D36D700044106F /* JSONFileManager.swift in Sources */,
 				3CDDAFDF26C0D92D0044106F /* TextInputCell.swift in Sources */,
 				3C0453F926BCEBD1007C402F /* Channel.swift in Sources */,
 				3C04540926BCFF6D007C402F /* CameraView.swift in Sources */,
@@ -482,10 +500,12 @@
 				3C04542626BF8BA8007C402F /* AddDeviceViewController.swift in Sources */,
 				3CDDAFF126C396450044106F /* Array+EXT.swift in Sources */,
 				3C71E80526BA5A2A001603E2 /* SceneDelegate.swift in Sources */,
+				3CDDB01426D36D700044106F /* JSONDataManager.swift in Sources */,
 				3C04541F26BF8A51007C402F /* RTSPPasswordQueryable.swift in Sources */,
 				3CDDB00426CE13D60044106F /* DateTime.swift in Sources */,
 				3C04541726BD01CE007C402F /* DTCheckMarkView.swift in Sources */,
 				3CDDB00726CE14180044106F /* EventCell.swift in Sources */,
+				3CDDB01826D36ED00044106F /* FileManager+EXT.swift in Sources */,
 				3C04543826C0CEFE007C402F /* NoContentBackgroundView.swift in Sources */,
 				3CDDAFF826C9CCE60044106F /* VideoStreamViewController.swift in Sources */,
 				3CDDAFDC26C0D7E80044106F /* AddDeviceManuallyViewController.swift in Sources */,
