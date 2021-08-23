@@ -18,6 +18,21 @@ class VideoStreamViewController: UIViewController {
             }
         }
     }
+    lazy var slideInTransitioningDelegate = SlideInPresentationManager()
+    private lazy var eventsViewController: EventsViewController = {
+        let eventsViewController = EventsViewController(style: .plain)
+        eventsViewController.title = "Events"
+        eventsViewController.separatorColor = .lightGray
+        eventsViewController.backgroundColor = UIColor.black
+        return eventsViewController
+    }()
+    private lazy var eventsNavigationController: UINavigationController = {
+        let navigationController = UINavigationController(rootViewController: eventsViewController)
+        navigationController.navigationBar.barStyle = .black
+        navigationController.modalPresentationStyle = .custom
+        navigationController.transitioningDelegate = slideInTransitioningDelegate
+        return navigationController
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,6 +77,22 @@ extension VideoStreamViewController {
         dismiss(animated: true, completion: nil)
     }
 
+    @IBAction func showEvents(sender: UIBarButtonItem) {
+        if let url = videoStreamURL {
+            eventsViewController.loadEvents(for: url)
+        }
+
+        eventsViewController.handler = { [weak self] event in
+            guard let weakSelf = self else { return }
+            let url = event.playbackURL
+            weakSelf.cameraView.loadVideo(from: url)
+            weakSelf.eventsViewController.dismiss(animated: true, completion: nil)
+        }
+
+        slideInTransitioningDelegate.direction = .right
+        present(eventsNavigationController  , animated: true, completion: nil)
+    }
+
     @IBAction func handleTap(gesture: UITapGestureRecognizer) {
         if let hidden = navigationController?.isNavigationBarHidden {
             navigationController?.setNavigationBarHidden(!hidden, animated: true)
@@ -79,5 +110,16 @@ extension VideoStreamViewController {
 
     override var shouldAutorotate: Bool {
         return true
+    }
+}
+
+extension VideoStreamViewController: UIPopoverPresentationControllerDelegate {
+    // MARK: - Popover presentation controller delegate
+
+    func adaptivePresentationStyle(
+        for controller: UIPresentationController,
+        traitCollection: UITraitCollection)
+    -> UIModalPresentationStyle {
+        return .none
     }
 }
