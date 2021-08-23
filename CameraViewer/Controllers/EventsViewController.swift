@@ -10,7 +10,7 @@ import UIKit
 class EventsViewController: UITableViewController, NoContentBackgroundView {
     private let reuseIdentifier = "EventCell"
     
-    var events: [Event]?
+    private var events: [Event]?
     var handler: ((Event) -> Void)?
     let backgroundView = DTTableBackgroundView(frame: .zero)
     var textColor: UIColor = .white {
@@ -32,6 +32,12 @@ class EventsViewController: UITableViewController, NoContentBackgroundView {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        tableView.rowHeight = 44.0
+
+        setupBackgroundView()
+
+        tableView.register(EventCell.self, forCellReuseIdentifier: reuseIdentifier)
     }
 }
 
@@ -64,7 +70,14 @@ extension EventsViewController {
                                          events: ["VideoMotion"], flags: ["Event", "Timing"],
                                          streams: ["Main"]) { [weak self] (events, _) in
                         guard let weakSelf = self else { return }
-                        weakSelf.events = events
+                        if let events = events {
+                            weakSelf.events = events.filter({
+                                doesEventTimeExist(start: $0.startTime, end: $0.endTime) ?? false
+                            }).sorted { $0 < $1 }
+                            DispatchQueue.main.async {
+                                weakSelf.tableView.reloadData()
+                            }
+                        }
                     }
                 }
             }
