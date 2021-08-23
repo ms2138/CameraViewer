@@ -13,10 +13,10 @@ class DahuaAPI: NSObject {
     private lazy var session = URLSession(configuration: .default, delegate: self, delegateQueue: nil)
     let username: String
     let password: String
-    let host: Host
+    let name: Host
 
     init(host: Host, username: String, password: String) {
-        self.host = host
+        self.name = host
         self.username = username
         self.password = password
 
@@ -28,7 +28,7 @@ extension DahuaAPI {
     func getChannelTitle(completion: @escaping (String?, URLResponse?, Error?) -> Void) {
         let actionQuery = URLQueryItem(name: "action", value: "getConfig")
         let channelTitleQuery = URLQueryItem(name: "name", value: "ChannelTitle")
-        let channelTitleEndPoint = EndPoint(host: host,
+        let channelTitleEndPoint = EndPoint(host: name,
                                             scheme: .http,
                                             path: .configManager,
                                             queryItems: [actionQuery, channelTitleQuery])
@@ -38,7 +38,7 @@ extension DahuaAPI {
     func getNetworkConfig(completion: @escaping (String?, URLResponse?, Error?) -> Void) {
         let actionQuery = URLQueryItem(name: "action", value: "getConfig")
         let networkNameQuery = URLQueryItem(name: "name", value: "Network")
-        let getNetworkConfigEndPoint = EndPoint(host: host,
+        let getNetworkConfigEndPoint = EndPoint(host: name,
                                                 scheme: .http,
                                                 path: .configManager,
                                                 queryItems: [actionQuery, networkNameQuery])
@@ -47,7 +47,7 @@ extension DahuaAPI {
 
     func getDeviceType(completion: @escaping (String?, URLResponse?, Error?) -> Void) {
         let actionQuery = URLQueryItem(name: "action", value: "getDeviceType")
-        let getDeviceTypeEndPoint = EndPoint(host: host,
+        let getDeviceTypeEndPoint = EndPoint(host: name,
                                              scheme: .http,
                                              path: .magicBox,
                                              queryItems: [actionQuery])
@@ -56,7 +56,7 @@ extension DahuaAPI {
 
     func getHardwareVersion(completion: @escaping (String?, URLResponse?, Error?) -> Void) {
         let actionQuery = URLQueryItem(name: "action", value: "getHardwareVersion")
-        let getHardwareVersionEndPoint = EndPoint(host: host,
+        let getHardwareVersionEndPoint = EndPoint(host: name,
                                                   scheme: .http,
                                                   path: .magicBox,
                                                   queryItems: [actionQuery])
@@ -65,7 +65,7 @@ extension DahuaAPI {
 
     func getSerialNumber(completion: @escaping (String?, URLResponse?, Error?) -> Void) {
         let actionQuery = URLQueryItem(name: "action", value: "getSerialNo")
-        let getSerialNumberEndPoint = EndPoint(host: host,
+        let getSerialNumberEndPoint = EndPoint(host: name,
                                                scheme: .http,
                                                path: .magicBox,
                                                queryItems: [actionQuery])
@@ -74,7 +74,7 @@ extension DahuaAPI {
 
     func getDeviceClass(completion: @escaping (String?, URLResponse?, Error?) -> Void) {
         let actionQuery = URLQueryItem(name: "action", value: "getDeviceClass")
-        let getDeviceClassEndPoint = EndPoint(host: host,
+        let getDeviceClassEndPoint = EndPoint(host: name,
                                               scheme: .http,
                                               path: .magicBox,
                                               queryItems: [actionQuery])
@@ -83,7 +83,7 @@ extension DahuaAPI {
 
     func getSystemInformation(completion: @escaping (String?, URLResponse?, Error?) -> Void) {
         let actionQuery = URLQueryItem(name: "action", value: "getSystemInfo")
-        let getSystemInformationEndPoint = EndPoint(host: host,
+        let getSystemInformationEndPoint = EndPoint(host: name,
                                                     scheme: .http,
                                                     path: .magicBox,
                                                     queryItems: [actionQuery])
@@ -92,7 +92,7 @@ extension DahuaAPI {
 
     func getVendorInformation(completion: @escaping (String?, URLResponse?, Error?) -> Void) {
         let actionQuery = URLQueryItem(name: "action", value: "getVendor")
-        let getVendorInformationEndPoint = EndPoint(host: host,
+        let getVendorInformationEndPoint = EndPoint(host: name,
                                                     scheme: .http,
                                                     path: .magicBox,
                                                     queryItems: [actionQuery])
@@ -101,7 +101,7 @@ extension DahuaAPI {
 
     func getCurrentTime(completion: @escaping (String?, URLResponse?, Error?) -> Void) {
         let actionQuery = URLQueryItem(name: "action", value: "getCurrentTime")
-        let getCurrentTimeEndPoint = EndPoint(host: host,
+        let getCurrentTimeEndPoint = EndPoint(host: name,
                                               scheme: .http,
                                               path: .global,
                                               queryItems: [actionQuery])
@@ -111,7 +111,7 @@ extension DahuaAPI {
     func getAutoFocusStatus(channel: String, completion: @escaping (String?, URLResponse?, Error?) -> Void) {
         let actionQuery = URLQueryItem(name: "action", value: "getFocusStatus")
         let channelNumberQuery = URLQueryItem(name: "channel", value: channel)
-        let getVideoConfigEndPoint = EndPoint(host: host,
+        let getVideoConfigEndPoint = EndPoint(host: name,
                                               scheme: .http,
                                               path: .videoInput,
                                               queryItems: [actionQuery, channelNumberQuery])
@@ -121,7 +121,7 @@ extension DahuaAPI {
     func performAutoFocus(channel: String, completion: @escaping (String?, URLResponse?, Error?) -> Void) {
         let actionQuery = URLQueryItem(name: "action", value: "autoFocus")
         let channelNumberQuery = URLQueryItem(name: "channel", value: channel)
-        let getVideoConfigEndPoint = EndPoint(host: host,
+        let getVideoConfigEndPoint = EndPoint(host: name,
                                               scheme: .http,
                                               path: .videoInput,
                                               queryItems: [actionQuery, channelNumberQuery])
@@ -135,7 +135,7 @@ extension DahuaAPI {
     func performDeviceDiscovery(deviceClass: String, completion: @escaping (String?, URLResponse?, Error?) -> Void) {
         let actionQuery = URLQueryItem(name: "action", value: "attach")
         let deviceClassQuery = URLQueryItem(name: "DeviceClass", value: deviceClass)
-        let deviceDiscoveryEndPoint = EndPoint(host: host,
+        let deviceDiscoveryEndPoint = EndPoint(host: name,
                                                scheme: .http,
                                                path: .discovery,
                                                queryItems: [actionQuery, deviceClassQuery])
@@ -149,7 +149,7 @@ extension DahuaAPI {
     func getRTSPStreamURL(channel: String, streamType: String) -> URL? {
         var urlComponents = URLComponents()
         urlComponents.scheme = "rtsp"
-        urlComponents.host = host
+        urlComponents.host = name
         urlComponents.user = username
         urlComponents.password = password
         urlComponents.port = 554
@@ -169,7 +169,7 @@ extension DahuaAPI {
     func getPlaybackStreamURL(channel: String, startTime: String, endTime: String) -> URL? {
         var urlComponents = URLComponents()
         urlComponents.scheme = "rtsp"
-        urlComponents.host = host
+        urlComponents.host = name
         urlComponents.user = username
         urlComponents.password = password
         urlComponents.port = 554
@@ -192,7 +192,7 @@ extension DahuaAPI {
     // ObjectId returned.  Will be needed to call findFiles, findNextFile, closeFileFinder, and destroyFileFinder
     func createFileFinder(completion: @escaping (String?, URLResponse?, Error?) -> Void) {
         let actionQuery = URLQueryItem(name: "action", value: "factory.create")
-        let createFileFinderEndPoint = EndPoint(host: host,
+        let createFileFinderEndPoint = EndPoint(host: name,
                                                 scheme: .http,
                                                 path: .mediaFileFind,
                                                 queryItems: [actionQuery])
@@ -202,7 +202,7 @@ extension DahuaAPI {
     func closeFileFinder(objectId: String, completion: @escaping (String?, URLResponse?, Error?) -> Void) {
         let actionQuery = URLQueryItem(name: "action", value: "close")
         let objectIdQuery = URLQueryItem(name: "object", value: objectId)
-        let closeFileFinderEndPoint = EndPoint(host: host,
+        let closeFileFinderEndPoint = EndPoint(host: name,
                                                scheme: .http,
                                                path: .mediaFileFind,
                                                queryItems: [actionQuery, objectIdQuery])
@@ -212,7 +212,7 @@ extension DahuaAPI {
     func destroyFileFinder(objectId: String, completion: @escaping (String?, URLResponse?, Error?) -> Void) {
         let actionQuery = URLQueryItem(name: "action", value: "destroy")
         let objectIdQuery = URLQueryItem(name: "object", value: objectId)
-        let destroyFileFinderEndPoint = EndPoint(host: host,
+        let destroyFileFinderEndPoint = EndPoint(host: name,
                                                  scheme: .http,
                                                  path: .mediaFileFind,
                                                  queryItems: [actionQuery, objectIdQuery])
@@ -257,7 +257,7 @@ extension DahuaAPI {
         let flagQueries = createQueryItems(from: flags, key: "Flag")
         queryItems.append(contentsOf: flagQueries)
 
-        let findFilesEndPoint = EndPoint(host: host,
+        let findFilesEndPoint = EndPoint(host: name,
                                          scheme: .http,
                                          path: .mediaFileFind,
                                          queryItems: queryItems)
@@ -315,7 +315,7 @@ extension DahuaAPI {
         let actionQuery = URLQueryItem(name: "action", value: "findNextFile")
         let objectIdQuery = URLQueryItem(name: "object", value: objectId)
         let countQuery = URLQueryItem(name: "count", value: fileCount)
-        let findNextFileEndPoint = EndPoint(host: host,
+        let findNextFileEndPoint = EndPoint(host: name,
                                             scheme: .http,
                                             path: .mediaFileFind,
                                             queryItems: [actionQuery, objectIdQuery, countQuery])

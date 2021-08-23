@@ -14,16 +14,16 @@ class DahuaQueryService: NSObject {
     }
     typealias Host = String
 
-    let host: Host
+    let name: Host
     let username: String
     let password: String
     private let dahuaAPI: DahuaAPI
 
     init(host: Host, username: String, password: String) {
-        self.host = host
+        self.name = host
         self.username = username
         self.password = password
-        self.dahuaAPI = DahuaAPI(host: host, username: username, password: password)
+        self.dahuaAPI = DahuaAPI(host: name, username: username, password: password)
 
         super.init()
     }
