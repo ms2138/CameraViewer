@@ -7,9 +7,12 @@
 
 import UIKit
 
-class CameraViewController: UICollectionViewController {
+class CameraViewController: UICollectionViewController, JSONFileManager {
+    typealias Element = URL
+
     private let reuseIdentifier = "CameraCell"
 
+    internal var fileName = "Streams.json"
     private var videoStreams = [URL]()
     @IBOutlet weak var selectionModeButtonItem: UIBarButtonItem!
     private var deleteButtonItem: UIBarButtonItem!
@@ -38,6 +41,40 @@ class CameraViewController: UICollectionViewController {
     }
 
 
+}
+
+private extension CameraViewController {
+    // MARK: - Save and read data
+
+    @objc func saveVideoStreams() {
+        do {
+            let unauthenticatedStreams = self.videoStreams.compactMap { url -> URL? in
+                var components = URLComponents(url: url, resolvingAgainstBaseURL: false)
+                components?.user = nil
+                components?.password = nil
+                return components?.url
+            }
+            try self.save(unauthenticatedStreams)
+        } catch {
+            debugLog("Failed to save data")
+        }
+    }
+
+    func readVideoStreams() {
+        do {
+            self.videoStreams = try read().compactMap { [unowned self] url -> URL? in
+                var components = URLComponents(url: url, resolvingAgainstBaseURL: false)
+                if let keychainQuery = self.generatePasswordQueryable(from: url),
+                   let credential = self.readFromKeychain(query: keychainQuery) {
+                    components?.user = credential.username
+                    components?.password = credential.password
+                }
+                return components?.url
+            }
+        } catch {
+            debugLog("Failed to read data")
+        }
+    }
 }
 
 extension CameraViewController {
