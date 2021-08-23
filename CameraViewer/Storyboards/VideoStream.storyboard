@@ -40,6 +40,12 @@
                                 <action selector="closeWithSender:" destination="xcv-3p-9DW" id="R8x-8n-QRZ"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Events" id="GzN-7X-bJM">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="showEventsWithSender:" destination="xcv-3p-9DW" id="X2I-3W-guV"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
