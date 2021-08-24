@@ -38,6 +38,17 @@ class CameraViewController: UICollectionViewController, JSONFileManager {
         deleteButtonItem.isEnabled = false
 
         setToolbarItems([deleteButtonItem], animated: true)
+
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(saveVideoStreams),
+                                               name: UIApplication.willTerminateNotification,
+                                               object: nil)
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(saveVideoStreams),
+                                               name: UIApplication.didEnterBackgroundNotification,
+                                               object: nil)
+
+        readVideoStreams()
     }
 
 
