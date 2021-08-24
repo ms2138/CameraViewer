@@ -32,7 +32,14 @@
                             <constraint firstItem="b4f-z3-bVy" firstAttribute="top" secondItem="Vrt-xb-C8B" secondAttribute="top" id="qIu-Wq-GCZ"/>
                         </constraints>
                     </view>
-                    <toolbarItems/>
+                    <toolbarItems>
+                        <barButtonItem title="Live" id="d5P-O1-8xR">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="showLiveViewWithSender:" destination="xcv-3p-9DW" id="QBk-Q6-id3"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
                     <navigationItem key="navigationItem" id="TwS-eb-hfQ">
                         <barButtonItem key="leftBarButtonItem" title="Close" id="TCV-t4-Iww">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

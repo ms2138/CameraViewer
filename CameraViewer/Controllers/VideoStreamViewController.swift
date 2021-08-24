@@ -93,6 +93,12 @@ extension VideoStreamViewController {
         present(eventsNavigationController  , animated: true, completion: nil)
     }
 
+    @IBAction func showLiveView(sender: UIBarButtonItem) {
+        if let videoStreamURL = videoStreamURL {
+            cameraView.loadVideo(from: videoStreamURL)
+        }
+    }
+
     @IBAction func handleTap(gesture: UITapGestureRecognizer) {
         if let hidden = navigationController?.isNavigationBarHidden {
             navigationController?.setNavigationBarHidden(!hidden, animated: true)
