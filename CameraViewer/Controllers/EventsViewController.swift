@@ -109,9 +109,11 @@ extension EventsViewController {
 
         if eventCount > 0 && tableView.backgroundView?.isHidden == false {
             hideBackgroundView()
+            backgroundView.stopLoadingOperation()
         }
         if eventCount == 0 {
             showBackgroundView()
+            backgroundView.startLoadingOperation()
         }
 
         return eventCount
